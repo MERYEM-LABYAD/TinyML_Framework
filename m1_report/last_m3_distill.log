@@ -1,0 +1,25 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+[FPN SYNC] lateral5 : 1189 -> 256
+[FPN SYNC] lateral4 : 594 -> 256
+[FPN SYNC] lateral3 : 297 -> 256
+[FPN SYNC] lateral2 : 149 -> 256
+[FPN OUTPUT SYNC] output5 : 256 -> 256
+[FPN OUTPUT SYNC] output4 : 256 -> 256
+[FPN OUTPUT SYNC] output3 : 256 -> 256
+[FPN OUTPUT SYNC] output2 : 256 -> 256
+[OK] Reconstruction des dimensions termin?e.
+[INFO] Tenseurs du checkpoint v?rifi?s : 295
+[M3] student = M2_expose_whole_backbone_t41.8_crank_matched.pth : 24,026,537 parametres (expose_whole_backbone, -41.83 %)
+[M3] parametres entrainables : 23,947,024 / 24,026,537  (freeze-at=2 : stem et/ou res2 geles) ; tailles d'entree (480, 512, 544, 576) (max 960)
+[M3] 1276 images d'entrainement ; batch=2 ; iterations=800 ; lr=0.001 ; beta=0.0 ; wd=0.0001
+  it 10/800  loss 1.7018  task 1.7018  feat 0.5762  lr 1.81e-04  gn 43.6  (28.6 s/it, reste ~6.3 h)
+  it 20/800  loss 0.9071  task 0.9071  feat 0.5781  lr 3.81e-04  gn 7.2  (29.2 s/it, reste ~6.3 h)
+  it 30/800  loss 0.4994  task 0.4994  feat 0.5252  lr 5.80e-04  gn 4.6  (29.7 s/it, reste ~6.4 h)
+  it 40/800  loss 0.4923  task 0.4923  feat 0.5542  lr 7.80e-04  gn 8.9  (28.7 s/it, reste ~6.1 h)
+  it 50/800  loss 0.6206  task 0.6206  feat 0.4221  lr 9.80e-04  gn 7.6  (26.9 s/it, reste ~5.6 h)
+  it 60/800  loss 1.1735  task 1.1735  feat 0.3830  lr 1.00e-03  gn 23.1  (25.8 s/it, reste ~5.3 h)
+  it 70/800  loss 0.6744  task 0.6744  feat 0.4732  lr 9.98e-04  gn 6.0  (25.6 s/it, reste ~5.2 h)
+  it 80/800  loss 0.4717  task 0.4717  feat 0.3390  lr 9.96e-04  gn 4.9  (26.0 s/it, reste ~5.2 h)
+  it 90/800  loss 0.4080  task 0.4080  feat 0.4396  lr 9.93e-04  gn 3.8  (26.6 s/it, reste ~5.3 h)
+  it 100/800  loss 0.5245  task 0.5245  feat 0.3946  lr 9.90e-04  gn 5.6  (28.4 s/it, reste ~5.5 h)
+  it 110/800  loss 0.4239  task 0.4239  feat 0.3190  lr 9.85e-04  gn 4.0  (30.2 s/it, reste ~5.8 h)

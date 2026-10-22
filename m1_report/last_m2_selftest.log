@@ -1,0 +1,6 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+  [M0] 6/6  (11.6 s/image)
+  [selftest] 6/6  (10.9 s/image)
+
+SELFTEST : ecart max running_mean = 0, running_var = 0
+RESULTAT : OK identite (recalibration neutre sur un modele non elague)

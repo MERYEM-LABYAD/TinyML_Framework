@@ -1,0 +1,7 @@
+\begin{tabular}{lrrrrrr}\toprule
+Stage & Acc (\%) & F1 (\%) & Size (MB) & Params (M) & MACs (M) & Lat (ms)\\\midrule
+Stage 0 FP32 baseline & 95.00 & 95.02 & 44.80 & 11.18 & 595 & 14.5\\
+Stage 1 structured pruned & 11.52 & 4.62 & 8.45 & 2.10 & 327 & 9.9\\
+Stage 2 KD recovery & 92.56 & 92.58 & 8.45 & 2.10 & 327 & 10.0\\
+Stage 3 INT8 PTQ & 92.32 & 92.33 & 2.19 & 2.10 & 327 & 6.0\\
+\bottomrule\end{tabular}

@@ -1,0 +1,86 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+GRAPH: hook actif sur proposal_generator.rpn_head
+GRAPH: hook actif sur roi_heads.box_predictor
+GRAPH: noeuds = 274
+
+######## ecretage = rank ########
+  protect_head           r=0.427 red= 48.6 % (rapport 48.6) ecart=  6.3 pts | fc1: moy 16 % [16-16] (rapport 13-13)  fc2: moy 16 % [16-16] (rapport 6-6)
+  expose_residual        r=0.138 red= 18.4 % (rapport 18.4) ecart= 11.6 pts | residual: moy 20 % [20-20] (rapport 39-48)  internal: moy 14 % [14-14] (rapport 0-10)
+  expose_internal        r=0.254 red= 31.5 % (rapport 31.5) ecart= 11.1 pts | internal: moy 33 % [32-33] (rapport 42-49)  residual: moy 23 % [23-23] (rapport 0-10)
+  expose_whole_backbone  r=0.364 red= 41.8 % (rapport 41.8) ecart=  0.0 pts | internal: moy 42 % [42-42] (rapport 40-49)  residual: moy 42 % [42-42] (rapport 40-49)
+  aggressive             r=0.573 red= 57.6 % (rapport 57.6) ecart=  7.9 pts | internal: moy 66 % [66-66] (rapport 72-79)  residual: moy 66 % [66-66] (rapport 72-79)  fc1: moy 16 % [16-16] (rapport 10-10)  fc2: moy 16 % [16-16] (rapport 3-3)
+  maximal                r=0.655 red= 61.7 % (rapport 61.7) ecart=  1.7 pts | internal: moy 75 % [75-75] (rapport 77-91)  residual: moy 75 % [75-75] (rapport 77-91)
+  ==> ecart moyen = 6.43 points
+
+######## ecretage = None ########
+  protect_head           r=0.398 red= 48.6 % (rapport 48.6) ecart= 21.5 pts | fc1: moy 20 % [20-20] (rapport 13-13)  fc2: moy 42 % [42-42] (rapport 6-6)
+  expose_residual        r=0.140 red= 18.4 % (rapport 18.4) ecart= 13.1 pts | residual: moy 17 % [1-50] (rapport 39-48)  internal: moy 5 % [0-33] (rapport 0-10)
+  expose_internal        r=0.245 red= 31.5 % (rapport 31.5) ecart= 20.4 pts | internal: moy 16 % [1-74] (rapport 42-49)  residual: moy 20 % [1-55] (rapport 0-10)
+  expose_whole_backbone  r=0.346 red= 41.8 % (rapport 41.8) ecart= 21.1 pts | internal: moy 22 % [1-81] (rapport 40-49)  residual: moy 38 % [6-76] (rapport 40-49)
+  aggressive             r=0.523 red= 57.6 % (rapport 57.6) ecart= 27.9 pts | internal: moy 37 % [2-92] (rapport 72-79)  residual: moy 55 % [19-90] (rapport 72-79)  fc1: moy 21 % [21-21] (rapport 10-10)  fc2: moy 42 % [42-42] (rapport 3-3)
+  maximal                r=0.582 red= 61.7 % (rapport 61.7) ecart= 27.5 pts | internal: moy 43 % [2-94] (rapport 77-91)  residual: moy 62 % [27-92] (rapport 77-91)
+  ==> ecart moyen = 21.92 points
+
+######## ecretage = (1.0, 99.0) ########
+  protect_head           r=0.411 red= 48.6 % (rapport 48.6) ecart= 20.5 pts | fc1: moy 18 % [18-18] (rapport 13-13)  fc2: moy 42 % [42-42] (rapport 6-6)
+  expose_residual        r=0.139 red= 18.4 % (rapport 18.4) ecart= 11.2 pts | residual: moy 18 % [7-38] (rapport 39-48)  internal: moy 8 % [2-27] (rapport 0-10)
+  expose_internal        r=0.246 red= 31.5 % (rapport 31.5) ecart= 16.2 pts | internal: moy 21 % [2-51] (rapport 42-49)  residual: moy 20 % [8-42] (rapport 0-10)
+  expose_whole_backbone  r=0.351 red= 41.8 % (rapport 41.8) ecart= 13.6 pts | internal: moy 27 % [5-60] (rapport 40-49)  residual: moy 39 % [22-64] (rapport 40-49)
+  aggressive             r=0.540 red= 57.6 % (rapport 57.6) ecart= 22.5 pts | internal: moy 46 % [19-78] (rapport 72-79)  residual: moy 58 % [43-80] (rapport 72-79)  fc1: moy 19 % [19-19] (rapport 10-10)  fc2: moy 42 % [42-42] (rapport 3-3)
+  maximal                r=0.607 red= 61.7 % (rapport 61.7) ecart= 18.1 pts | internal: moy 54 % [23-83] (rapport 77-91)  residual: moy 66 % [53-85] (rapport 77-91)
+  ==> ecart moyen = 17.00 points
+
+######## ecretage = (2.0, 98.0) ########
+  protect_head           r=0.409 red= 48.6 % (rapport 48.6) ecart= 19.0 pts | fc1: moy 19 % [19-19] (rapport 13-13)  fc2: moy 38 % [38-38] (rapport 6-6)
+  expose_residual        r=0.137 red= 18.4 % (rapport 18.4) ecart= 11.4 pts | residual: moy 18 % [10-34] (rapport 39-48)  internal: moy 9 % [3-27] (rapport 0-10)
+  expose_internal        r=0.246 red= 31.5 % (rapport 31.5) ecart= 15.8 pts | internal: moy 22 % [9-44] (rapport 42-49)  residual: moy 22 % [13-40] (rapport 0-10)
+  expose_whole_backbone  r=0.348 red= 41.8 % (rapport 41.8) ecart= 11.1 pts | internal: moy 29 % [12-55] (rapport 40-49)  residual: moy 39 % [27-61] (rapport 40-49)
+  aggressive             r=0.539 red= 57.6 % (rapport 57.6) ecart= 20.7 pts | internal: moy 49 % [25-74] (rapport 72-79)  residual: moy 59 % [47-77] (rapport 72-79)  fc1: moy 20 % [20-20] (rapport 10-10)  fc2: moy 38 % [38-38] (rapport 3-3)
+  maximal                r=0.603 red= 61.7 % (rapport 61.7) ecart= 15.5 pts | internal: moy 57 % [31-79] (rapport 77-91)  residual: moy 68 % [58-82] (rapport 77-91)
+  ==> ecart moyen = 15.57 points
+
+######## ecretage = (5.0, 95.0) ########
+  protect_head           r=0.413 red= 48.6 % (rapport 48.6) ecart= 16.3 pts | fc1: moy 19 % [19-19] (rapport 13-13)  fc2: moy 33 % [33-33] (rapport 6-6)
+  expose_residual        r=0.136 red= 18.4 % (rapport 18.4) ecart= 12.6 pts | residual: moy 16 % [12-25] (rapport 39-48)  internal: moy 12 % [6-25] (rapport 0-10)
+  expose_internal        r=0.246 red= 31.5 % (rapport 31.5) ecart= 14.2 pts | internal: moy 25 % [16-44] (rapport 42-49)  residual: moy 22 % [15-33] (rapport 0-10)
+  expose_whole_backbone  r=0.349 red= 41.8 % (rapport 41.8) ecart=  7.8 pts | internal: moy 33 % [19-54] (rapport 40-49)  residual: moy 37 % [28-53] (rapport 40-49)
+  aggressive             r=0.541 red= 57.6 % (rapport 57.6) ecart= 18.5 pts | internal: moy 53 % [33-73] (rapport 72-79)  residual: moy 58 % [48-71] (rapport 72-79)  fc1: moy 20 % [20-20] (rapport 10-10)  fc2: moy 35 % [35-35] (rapport 3-3)
+  maximal                r=0.607 red= 61.7 % (rapport 61.7) ecart= 13.1 pts | internal: moy 61 % [41-78] (rapport 77-91)  residual: moy 67 % [59-76] (rapport 77-91)
+  ==> ecart moyen = 13.75 points
+
+######## ecretage = (10.0, 90.0) ########
+  protect_head           r=0.402 red= 48.6 % (rapport 48.6) ecart= 16.2 pts | fc1: moy 23 % [23-23] (rapport 13-13)  fc2: moy 29 % [29-29] (rapport 6-6)
+  expose_residual        r=0.131 red= 18.4 % (rapport 18.4) ecart= 14.4 pts | residual: moy 14 % [12-15] (rapport 39-48)  internal: moy 13 % [11-20] (rapport 0-10)
+  expose_internal        r=0.240 red= 31.5 % (rapport 31.5) ecart= 14.4 pts | internal: moy 26 % [17-38] (rapport 42-49)  residual: moy 22 % [19-27] (rapport 0-10)
+  expose_whole_backbone  r=0.341 red= 41.8 % (rapport 41.8) ecart=  6.0 pts | internal: moy 34 % [23-46] (rapport 40-49)  residual: moy 37 % [32-46] (rapport 40-49)
+  aggressive             r=0.526 red= 57.6 % (rapport 57.6) ecart= 18.5 pts | internal: moy 54 % [38-70] (rapport 72-79)  residual: moy 57 % [51-64] (rapport 72-79)  fc1: moy 24 % [24-24] (rapport 10-10)  fc2: moy 30 % [30-30] (rapport 3-3)
+  maximal                r=0.588 red= 61.7 % (rapport 61.7) ecart= 14.0 pts | internal: moy 61 % [45-75] (rapport 77-91)  residual: moy 65 % [60-70] (rapport 77-91)
+  ==> ecart moyen = 13.90 points
+
+######## ecretage = (15.0, 85.0) ########
+  protect_head           r=0.394 red= 48.6 % (rapport 48.6) ecart= 17.9 pts | fc1: moy 26 % [26-26] (rapport 13-13)  fc2: moy 29 % [29-29] (rapport 6-6)
+  expose_residual        r=0.118 red= 18.4 % (rapport 18.4) ecart= 18.3 pts | residual: moy 5 % [0-15] (rapport 39-48)  internal: moy 10 % [0-16] (rapport 0-10)
+  expose_internal        r=0.232 red= 31.5 % (rapport 31.5) ecart= 15.1 pts | internal: moy 24 % [18-33] (rapport 42-49)  residual: moy 22 % [20-25] (rapport 0-10)
+  expose_whole_backbone  r=0.330 red= 41.8 % (rapport 41.8) ecart=  6.7 pts | internal: moy 33 % [27-42] (rapport 40-49)  residual: moy 34 % [31-42] (rapport 40-49)
+  aggressive             r=0.514 red= 57.6 % (rapport 57.6) ecart= 20.4 pts | internal: moy 53 % [39-64] (rapport 72-79)  residual: moy 54 % [50-62] (rapport 72-79)  fc1: moy 27 % [27-27] (rapport 10-10)  fc2: moy 31 % [31-31] (rapport 3-3)
+  maximal                r=0.569 red= 61.7 % (rapport 61.7) ecart= 16.5 pts | internal: moy 59 % [44-71] (rapport 77-91)  residual: moy 62 % [58-66] (rapport 77-91)
+  ==> ecart moyen = 15.80 points
+
+######## ecretage = (25.0, 75.0) ########
+  protect_head           r=0.379 red= 48.6 % (rapport 48.6) ecart= 22.0 pts | fc1: moy 32 % [32-32] (rapport 13-13)  fc2: moy 31 % [31-31] (rapport 6-6)
+  expose_residual        r=0.133 red= 18.4 % (rapport 18.4) ecart= 17.7 pts | residual: moy 7 % [0-25] (rapport 39-48)  internal: moy 8 % [0-25] (rapport 0-10)
+  expose_internal        r=0.210 red= 31.5 % (rapport 31.5) ecart= 14.2 pts | internal: moy 18 % [2-25] (rapport 42-49)  residual: moy 11 % [0-25] (rapport 0-10)
+  expose_whole_backbone  r=0.318 red= 41.8 % (rapport 41.8) ecart=  7.9 pts | internal: moy 32 % [29-38] (rapport 40-49)  residual: moy 32 % [30-35] (rapport 40-49)
+  aggressive             r=0.490 red= 57.6 % (rapport 57.6) ecart= 24.6 pts | internal: moy 51 % [39-59] (rapport 72-79)  residual: moy 51 % [48-56] (rapport 72-79)  fc1: moy 34 % [34-34] (rapport 10-10)  fc2: moy 35 % [35-35] (rapport 3-3)
+  maximal                r=0.546 red= 61.7 % (rapport 61.7) ecart= 19.3 pts | internal: moy 57 % [44-66] (rapport 77-91)  residual: moy 58 % [56-61] (rapport 77-91)
+  ==> ecart moyen = 17.62 points
+
+CLASSEMENT (meilleur en premier) :
+   ecretage rank  ->  ecart moyen 6.43 points
+   ecretage (5.0, 95.0)  ->  ecart moyen 13.75 points
+   ecretage (10.0, 90.0)  ->  ecart moyen 13.90 points
+   ecretage (2.0, 98.0)  ->  ecart moyen 15.57 points
+   ecretage (15.0, 85.0)  ->  ecart moyen 15.80 points
+   ecretage (1.0, 99.0)  ->  ecart moyen 17.00 points
+   ecretage (25.0, 75.0)  ->  ecart moyen 17.62 points
+   ecretage None  ->  ecart moyen 21.92 points

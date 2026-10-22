@@ -1,0 +1,20 @@
+{
+  "criterion": "l1",
+  "target": 80,
+  "params_reduction_pct": 81.8404309492291,
+  "channel_ratio": 0.8,
+  "params_M": 2.030538,
+  "pruned": {
+    "acc": 10.04,
+    "precision": 2.2536130068245686,
+    "recall": 10.040000000000001,
+    "f1": 1.9016711492721778
+  },
+  "distilled": {
+    "acc": 82.32,
+    "precision": 82.54524166160621,
+    "recall": 82.32000000000002,
+    "f1": 82.37406271315783
+  },
+  "engine": "framework"
+}

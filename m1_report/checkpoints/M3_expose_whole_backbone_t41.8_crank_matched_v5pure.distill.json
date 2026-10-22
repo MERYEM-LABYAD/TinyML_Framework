@@ -1,0 +1,43 @@
+{
+  "levels": [
+    "p2",
+    "p3",
+    "p4",
+    "p5"
+  ],
+  "beta": 0.5,
+  "iters": 1600,
+  "batch": 2,
+  "lr": 0.001,
+  "warmup": 50,
+  "weight_decay": 0.0001,
+  "momentum": 0.9,
+  "grad_clip": 10.0,
+  "seed": 0,
+  "schedule": "warmup lineaire puis cosinus",
+  "augmentation": "flip horizontal",
+  "min_size_train": [
+    640,
+    704,
+    768,
+    800
+  ],
+  "max_size_train": 1333,
+  "freeze_at": 0,
+  "teacher": "M0-8000 gele",
+  "source_m2": "m1_report/checkpoints/M2_expose_whole_backbone_t41.8_crank_matched.pth",
+  "kd_cls": 0.0,
+  "kd_temp": 2.0,
+  "tag": "v5pure",
+  "loss_first20": 1.0312762409448624,
+  "loss_last20": 0.38698151111602785,
+  "seconds": 2817.7725896835327,
+  "gates": {
+    "params_unchanged": true,
+    "finite_parameters": true,
+    "loss_decreased": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 15,
+    "reload_ok": true
+  }
+}

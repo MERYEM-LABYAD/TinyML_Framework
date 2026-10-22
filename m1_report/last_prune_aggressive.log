@@ -1,0 +1,95 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+GRAPH: hook actif sur proposal_generator.rpn_head
+GRAPH: hook actif sur roi_heads.box_predictor
+GRAPH: noeuds = 274
+
+UNITES DECOUVERTES (canaux couples) :
+uid type      stage canaux  membres (premiers)  | proteges ?
+  0 other              256  backbone.fpn_lateral2, backbone.fpn_lateral3 ...  | exclusion dure (backbone.fpn_)
+  1 other              256  backbone.fpn_output2, backbone.fpn_output3 ...  | exclusion dure (backbone.fpn_)
+  2 stem                64  backbone.bottom_up.stem.conv1  | 
+  3 residual  res2     256  backbone.bottom_up.res2.0.conv3, backbone.bottom_up.res2.0.shortcut ...  | 
+  4 internal  res2      64  backbone.bottom_up.res2.0.conv1  | 
+  5 internal  res2      64  backbone.bottom_up.res2.0.conv2  | 
+  6 internal  res2      64  backbone.bottom_up.res2.1.conv1  | 
+  7 internal  res2      64  backbone.bottom_up.res2.1.conv2  | 
+  8 internal  res2      64  backbone.bottom_up.res2.2.conv1  | 
+  9 internal  res2      64  backbone.bottom_up.res2.2.conv2  | 
+ 10 residual  res3     512  backbone.bottom_up.res3.0.conv3, backbone.bottom_up.res3.0.shortcut ...  | 
+ 11 internal  res3     128  backbone.bottom_up.res3.0.conv1  | 
+ 12 internal  res3     128  backbone.bottom_up.res3.0.conv2  | 
+ 13 internal  res3     128  backbone.bottom_up.res3.1.conv1  | 
+ 14 internal  res3     128  backbone.bottom_up.res3.1.conv2  | 
+ 15 internal  res3     128  backbone.bottom_up.res3.2.conv1  | 
+ 16 internal  res3     128  backbone.bottom_up.res3.2.conv2  | 
+ 17 internal  res3     128  backbone.bottom_up.res3.3.conv1  | 
+ 18 internal  res3     128  backbone.bottom_up.res3.3.conv2  | 
+ 19 residual  res4    1024  backbone.bottom_up.res4.0.conv3, backbone.bottom_up.res4.0.shortcut ...  | 
+ 20 internal  res4     256  backbone.bottom_up.res4.0.conv1  | 
+ 21 internal  res4     256  backbone.bottom_up.res4.0.conv2  | 
+ 22 internal  res4     256  backbone.bottom_up.res4.1.conv1  | 
+ 23 internal  res4     256  backbone.bottom_up.res4.1.conv2  | 
+ 24 internal  res4     256  backbone.bottom_up.res4.2.conv1  | 
+ 25 internal  res4     256  backbone.bottom_up.res4.2.conv2  | 
+ 26 internal  res4     256  backbone.bottom_up.res4.3.conv1  | 
+ 27 internal  res4     256  backbone.bottom_up.res4.3.conv2  | 
+ 28 internal  res4     256  backbone.bottom_up.res4.4.conv1  | 
+ 29 internal  res4     256  backbone.bottom_up.res4.4.conv2  | 
+ 30 internal  res4     256  backbone.bottom_up.res4.5.conv1  | 
+ 31 internal  res4     256  backbone.bottom_up.res4.5.conv2  | 
+ 32 residual  res5    2048  backbone.bottom_up.res5.0.conv3, backbone.bottom_up.res5.0.shortcut ...  | 
+ 33 internal  res5     512  backbone.bottom_up.res5.0.conv1  | 
+ 34 internal  res5     512  backbone.bottom_up.res5.0.conv2  | 
+ 35 internal  res5     512  backbone.bottom_up.res5.1.conv1  | 
+ 36 internal  res5     512  backbone.bottom_up.res5.1.conv2  | 
+ 37 internal  res5     512  backbone.bottom_up.res5.2.conv1  | 
+ 38 internal  res5     512  backbone.bottom_up.res5.2.conv2  | 
+ 39 rpn                256  proposal_generator.rpn_head.conv  | 
+ 40 other                3  proposal_generator.rpn_head.objectness_logits  | exclusion dure (proposal_generator.rpn_head.objectness_logits)
+ 41 other               12  proposal_generator.rpn_head.anchor_deltas  | exclusion dure (proposal_generator.rpn_head.anchor_deltas)
+ 42 fc                1024  roi_heads.box_head.fc1  | 
+ 43 fc                1024  roi_heads.box_head.fc2  | 
+ 44 other                4  roi_heads.box_predictor.cls_score  | exclusion dure (roi_heads.box_predictor)
+ 45 other               12  roi_heads.box_predictor.bbox_pred  | exclusion dure (roi_heads.box_predictor)
+[RATIO] r=0.5414 pour viser 57.6 % de parametres en moins
+[PLAN] config=aggressive r=0.5414 canaux retires=7450/13760 parametres predits=17,516,772
+chirurgie : 40/40 unites coupees
+[FPN SYNC] lateral5 : 600 -> 256
+[FPN SYNC] lateral4 : 408 -> 256
+[FPN SYNC] lateral3 : 264 -> 256
+[FPN SYNC] lateral2 : 116 -> 256
+[FPN OUTPUT SYNC] output5 : 256 -> 256
+[FPN OUTPUT SYNC] output4 : 256 -> 256
+[FPN OUTPUT SYNC] output3 : 256 -> 256
+[FPN OUTPUT SYNC] output2 : 256 -> 256
+[OK] Reconstruction des dimensions termin?e.
+[INFO] Tenseurs du checkpoint v?rifi?s : 295
+
+======================================================================
+M1 [aggressive]  parametres 41,305,311 -> 17,516,772   (-57.59 %)
+rapport (apres recuperation) : -57.6 %   backbone -72 a -79 %, fc6 -10 %, fc7 -3 %
+   fc             - 27.3 %
+   internal:res2  - 50.8 %
+   internal:res3  - 49.1 %
+   internal:res4  - 53.0 %
+   internal:res5  - 62.6 %
+   residual:res2  - 54.7 %
+   residual:res3  - 48.4 %
+   residual:res4  - 60.2 %
+   residual:res5  - 70.7 %
+   rpn            - 63.3 %
+   stem           - 43.8 %
+PORTES : {
+ "no_rejected_group": true,
+ "params_equal_prediction": true,
+ "fewer_params": true,
+ "forward_finite": true,
+ "n_detections_at_0.05_on_one_image": 0,
+ "finite_parameters": true,
+ "checkpoint_bytes": 70343994,
+ "checkpoint_size_matches_params": true,
+ "reload_ok": true
+}
+RESULTAT : M1 VALIDE
+checkpoint : E:\Stage2\TinyML_Framework\m1_report\checkpoints\M1R_aggressive_t57.6.pth
+======================================================================

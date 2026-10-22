@@ -1,0 +1,160 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+GRAPH: hook actif sur proposal_generator.rpn_head
+GRAPH: hook actif sur roi_heads.box_predictor
+GRAPH: noeuds = 274
+
+UNITES DECOUVERTES (canaux couples) :
+uid type      stage canaux  membres (premiers)  | proteges ?
+  0 other              256  backbone.fpn_lateral2, backbone.fpn_lateral3 ...  | exclusion dure (backbone.fpn_)
+  1 other              256  backbone.fpn_output2, backbone.fpn_output3 ...  | exclusion dure (backbone.fpn_)
+  2 stem                64  backbone.bottom_up.stem.conv1  | 
+  3 residual  res2     256  backbone.bottom_up.res2.0.conv3, backbone.bottom_up.res2.0.shortcut ...  | 
+  4 internal  res2      64  backbone.bottom_up.res2.0.conv1  | 
+  5 internal  res2      64  backbone.bottom_up.res2.0.conv2  | 
+  6 internal  res2      64  backbone.bottom_up.res2.1.conv1  | 
+  7 internal  res2      64  backbone.bottom_up.res2.1.conv2  | 
+  8 internal  res2      64  backbone.bottom_up.res2.2.conv1  | 
+  9 internal  res2      64  backbone.bottom_up.res2.2.conv2  | 
+ 10 residual  res3     512  backbone.bottom_up.res3.0.conv3, backbone.bottom_up.res3.0.shortcut ...  | 
+ 11 internal  res3     128  backbone.bottom_up.res3.0.conv1  | 
+ 12 internal  res3     128  backbone.bottom_up.res3.0.conv2  | 
+ 13 internal  res3     128  backbone.bottom_up.res3.1.conv1  | 
+ 14 internal  res3     128  backbone.bottom_up.res3.1.conv2  | 
+ 15 internal  res3     128  backbone.bottom_up.res3.2.conv1  | 
+ 16 internal  res3     128  backbone.bottom_up.res3.2.conv2  | 
+ 17 internal  res3     128  backbone.bottom_up.res3.3.conv1  | 
+ 18 internal  res3     128  backbone.bottom_up.res3.3.conv2  | 
+ 19 residual  res4    1024  backbone.bottom_up.res4.0.conv3, backbone.bottom_up.res4.0.shortcut ...  | 
+ 20 internal  res4     256  backbone.bottom_up.res4.0.conv1  | 
+ 21 internal  res4     256  backbone.bottom_up.res4.0.conv2  | 
+ 22 internal  res4     256  backbone.bottom_up.res4.1.conv1  | 
+ 23 internal  res4     256  backbone.bottom_up.res4.1.conv2  | 
+ 24 internal  res4     256  backbone.bottom_up.res4.2.conv1  | 
+ 25 internal  res4     256  backbone.bottom_up.res4.2.conv2  | 
+ 26 internal  res4     256  backbone.bottom_up.res4.3.conv1  | 
+ 27 internal  res4     256  backbone.bottom_up.res4.3.conv2  | 
+ 28 internal  res4     256  backbone.bottom_up.res4.4.conv1  | 
+ 29 internal  res4     256  backbone.bottom_up.res4.4.conv2  | 
+ 30 internal  res4     256  backbone.bottom_up.res4.5.conv1  | 
+ 31 internal  res4     256  backbone.bottom_up.res4.5.conv2  | 
+ 32 residual  res5    2048  backbone.bottom_up.res5.0.conv3, backbone.bottom_up.res5.0.shortcut ...  | 
+ 33 internal  res5     512  backbone.bottom_up.res5.0.conv1  | 
+ 34 internal  res5     512  backbone.bottom_up.res5.0.conv2  | 
+ 35 internal  res5     512  backbone.bottom_up.res5.1.conv1  | 
+ 36 internal  res5     512  backbone.bottom_up.res5.1.conv2  | 
+ 37 internal  res5     512  backbone.bottom_up.res5.2.conv1  | 
+ 38 internal  res5     512  backbone.bottom_up.res5.2.conv2  | 
+ 39 rpn                256  proposal_generator.rpn_head.conv  | 
+ 40 other                3  proposal_generator.rpn_head.objectness_logits  | exclusion dure (proposal_generator.rpn_head.objectness_logits)
+ 41 other               12  proposal_generator.rpn_head.anchor_deltas  | exclusion dure (proposal_generator.rpn_head.anchor_deltas)
+ 42 fc                1024  roi_heads.box_head.fc1  | 
+ 43 fc                1024  roi_heads.box_head.fc2  | 
+ 44 other                4  roi_heads.box_predictor.cls_score  | exclusion dure (roi_heads.box_predictor)
+ 45 other               12  roi_heads.box_predictor.bbox_pred  | exclusion dure (roi_heads.box_predictor)
+
+PLAN (aucune chirurgie)  :  r litteral  /  r qui donne la meme reduction que le rapport
+
+== expose_whole_backbone: r=0.55  ->  reduction predite 57.2 %  (rapport : 41.8 %)
+     fc             - 26.6 %  (544/2048)
+     internal:res2  - 37.5 %  (144/384)
+     internal:res3  - 40.5 %  (415/1024)
+     internal:res4  - 49.6 %  (1523/3072)
+     internal:res5  - 66.5 %  (2043/3072)
+     residual:res2  - 45.7 %  (117/256)
+     residual:res3  - 45.5 %  (233/512)
+     residual:res4  - 67.2 %  (688/1024)
+     residual:res5  - 81.2 %  (1664/2048)
+     rpn            - 66.8 %  (171/256)
+     stem           - 40.6 %  (26/64)
+     [rapport] environ -40 a -49 % partout dans le backbone
+     r equivalent pour 41.8 % : 0.3509
+
+== maximal: r=0.9  ->  reduction predite 78.7 %  (rapport : 61.7 %)
+     fc             - 62.7 %  (1285/2048)
+     internal:res2  - 87.2 %  (335/384)
+     internal:res3  - 93.1 %  (953/1024)
+     internal:res4  - 93.9 %  (2886/3072)
+     internal:res5  - 96.5 %  (2965/3072)
+     residual:res2  - 93.0 %  (238/256)
+     residual:res3  - 95.3 %  (488/512)
+     residual:res4  - 97.1 %  (994/1024)
+     residual:res5  - 97.7 %  (2000/2048)
+     rpn            - 80.9 %  (207/256)
+     stem           - 51.6 %  (33/64)
+     [rapport] backbone -77 a -91 %
+     r equivalent pour 61.7 % : 0.6071
+
+== aggressive: r=0.6  ->  reduction predite 61.6 %  (rapport : 57.6 %)
+     fc             - 34.5 %  (707/2048)
+     internal:res2  - 39.8 %  (153/384)
+     internal:res3  - 47.2 %  (483/1024)
+     internal:res4  - 54.5 %  (1673/3072)
+     internal:res5  - 70.8 %  (2175/3072)
+     residual:res2  - 51.6 %  (132/256)
+     residual:res3  - 50.8 %  (260/512)
+     residual:res4  - 72.5 %  (742/1024)
+     residual:res5  - 84.3 %  (1727/2048)
+     rpn            - 68.8 %  (176/256)
+     stem           - 43.8 %  (28/64)
+     [rapport] backbone -72 a -79 %, fc6 -10 %, fc7 -3 %
+     r equivalent pour 57.6 % : 0.5404
+
+== protect_head: r=0.8  ->  reduction predite 76.6 %  (rapport : 48.6 %)
+     fc             - 60.3 %  (1234/2048)
+     internal:res2  - 68.2 %  (262/384)
+     internal:res3  - 73.4 %  (752/1024)
+     internal:res4  - 77.7 %  (2388/3072)
+     internal:res5  - 87.0 %  (2674/3072)
+     residual:res2  - 76.2 %  (195/256)
+     residual:res3  - 78.7 %  (403/512)
+     residual:res4  - 89.8 %  (920/1024)
+     residual:res5  - 93.2 %  (1908/2048)
+     rpn            - 91.4 %  (234/256)
+     stem           - 59.4 %  (38/64)
+     [rapport] fc6 -13 %, fc7 -6 %
+     r equivalent pour 48.6 % : 0.4109
+
+== expose_internal: r=0.55  ->  reduction predite 57.6 %  (rapport : 31.5 %)
+     fc             - 29.2 %  (597/2048)
+     internal:res2  - 39.8 %  (153/384)
+     internal:res3  - 47.5 %  (486/1024)
+     internal:res4  - 54.6 %  (1678/3072)
+     internal:res5  - 71.0 %  (2181/3072)
+     residual:res2  - 32.4 %  (83/256)
+     residual:res3  - 31.1 %  (159/512)
+     residual:res4  - 53.7 %  (550/1024)
+     residual:res5  - 72.2 %  (1478/2048)
+     rpn            - 68.4 %  (175/256)
+     stem           - 43.8 %  (28/64)
+     [rapport] canaux internes -42 a -49 %, residuels presque intacts
+     r equivalent pour 31.5 % : 0.2456
+
+== expose_residual: r=0.55  ->  reduction predite 58.6 %  (rapport : 18.4 %)
+     fc             - 32.7 %  (670/2048)
+     internal:res2  - 31.2 %  (120/384)
+     internal:res3  - 32.7 %  (335/1024)
+     internal:res4  - 42.6 %  (1310/3072)
+     internal:res5  - 59.6 %  (1831/3072)
+     residual:res2  - 62.9 %  (161/256)
+     residual:res3  - 61.7 %  (316/512)
+     residual:res4  - 80.0 %  (819/1024)
+     residual:res5  - 87.9 %  (1800/2048)
+     rpn            - 69.5 %  (178/256)
+     stem           - 43.8 %  (28/64)
+     [rapport] canaux residuels -39 a -48 %, internes presque intacts
+     r equivalent pour 18.4 % : 0.1392
+
+== uniform_local: r=0.8  ->  reduction predite 87.2 %  (rapport : 51.8 %)
+     fc             - 90.0 %  (1843/2048)
+     internal:res2  - 60.7 %  (233/384)
+     internal:res3  - 65.6 %  (672/1024)
+     internal:res4  - 70.5 %  (2166/3072)
+     internal:res5  - 82.8 %  (2544/3072)
+     residual:res2  - 71.9 %  (184/256)
+     residual:res3  - 71.3 %  (365/512)
+     residual:res4  - 85.3 %  (873/1024)
+     residual:res5  - 90.9 %  (1861/2048)
+     rpn            - 90.6 %  (232/256)
+     stem           - 54.7 %  (35/64)
+     [rapport] fc6 -99 %, fc7 -98 %, RPN -68 %
+     r equivalent pour 51.8 % : 0.3742

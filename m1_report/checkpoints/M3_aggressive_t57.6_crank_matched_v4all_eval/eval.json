@@ -1,0 +1,28 @@
+{
+  "coco_score_thresh": 0.05,
+  "custom_score_thresh": 0.5,
+  "AP": 62.49117067320306,
+  "AP50": 81.93993293149252,
+  "AP75": 73.54358158948313,
+  "APs": 0.0,
+  "APm": 0.0,
+  "APl": 62.583555664796556,
+  "AP_per_class": {
+    "AP-No issues": 71.42906171072958,
+    "AP-Broken": 53.200856087084446,
+    "AP-Flashover damage": 62.84359422179513
+  },
+  "TP": 2968,
+  "FP": 841,
+  "FN": 363,
+  "Precision": 0.779207140981885,
+  "Recall": 0.8910237166016212,
+  "F1": 0.831372549019608,
+  "Jaccard": 0.7114093959731543,
+  "n_gt": 3331,
+  "seconds_total": 202.83234117400025,
+  "note": "aucune detection -> AP indefini, fixe a 0",
+  "checkpoint": "m1_report/checkpoints/M3_aggressive_t57.6_crank_matched_v4all.pth",
+  "parameters": 17507472,
+  "size_mb_state_dict": 70.17576
+}

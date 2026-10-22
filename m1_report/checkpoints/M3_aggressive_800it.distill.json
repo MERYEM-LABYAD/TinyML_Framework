@@ -1,0 +1,40 @@
+{
+  "levels": [
+    "p2",
+    "p3",
+    "p4",
+    "p5"
+  ],
+  "beta": 0.5,
+  "iters": 800,
+  "batch": 2,
+  "lr": 0.001,
+  "warmup": 50,
+  "weight_decay": 0.0001,
+  "momentum": 0.9,
+  "grad_clip": 10.0,
+  "seed": 0,
+  "schedule": "warmup lineaire puis cosinus",
+  "augmentation": "flip horizontal",
+  "min_size_train": [
+    480,
+    512,
+    544,
+    576
+  ],
+  "max_size_train": 960,
+  "freeze_at": 2,
+  "teacher": "M0-8000 gele",
+  "source_m2": "m1_report\\checkpoints\\M2_aggressive_t57.6_crank_matched.pth",
+  "loss_first20": 2.0065614879131317,
+  "loss_last20": 0.6266702517867089,
+  "seconds": 12153.750064849854,
+  "gates": {
+    "params_unchanged": true,
+    "finite_parameters": true,
+    "loss_decreased": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 16,
+    "reload_ok": true
+  }
+}

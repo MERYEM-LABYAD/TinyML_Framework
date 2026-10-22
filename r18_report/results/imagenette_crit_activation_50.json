@@ -1,0 +1,20 @@
+{
+  "criterion": "activation",
+  "target": 50,
+  "params_reduction_pct": 50.960815951718004,
+  "channel_ratio": 0.5,
+  "params_M": 5.483386,
+  "pruned": {
+    "acc": 12.84,
+    "precision": 8.000557111113965,
+    "recall": 12.840000000000002,
+    "f1": 4.775788605416302
+  },
+  "distilled": {
+    "acc": 91.64,
+    "precision": 91.67231676200764,
+    "recall": 91.64,
+    "f1": 91.64238840789635
+  },
+  "engine": "framework"
+}

@@ -1,0 +1,675 @@
+{
+  "config": "maximal",
+  "ratio_used": 0.6071484375,
+  "weights": {
+    "stem": 1.5,
+    "internal": 0.7,
+    "residual": 0.7,
+    "rpn": 2.7,
+    "fc": 3.0
+  },
+  "min_keep": 8,
+  "filter_zero_thresh": 0.9,
+  "percentile_clip": [
+    5.0,
+    95.0
+  ],
+  "m0_checkpoint": "E:\\Stage2\\Faster-rcnn\\output_8000\\model_final.pth",
+  "m0_sha256": "740FFEB4C02BE3658DE1E3CC486588BE16B83BC1150592DAE4D69C5984B9BB8E",
+  "taylor_n_images": 300,
+  "params_before": 41305311,
+  "params_after": 15834730,
+  "params_predicted": 15834730,
+  "reduction_pct": 61.66417921414512,
+  "report_reference": {
+    "params_reduced_pct": 61.7,
+    "ref_text": "backbone -77 a -91 %",
+    "ap_after_recovery": 0.6754,
+    "ap50_after_recovery": 0.8719
+  },
+  "summary_by_label": {
+    "fc": {
+      "removed": 618,
+      "channels": 2048,
+      "removed_pct": 30.17578125
+    },
+    "internal:res2": {
+      "removed": 217,
+      "channels": 384,
+      "removed_pct": 56.510416666666664
+    },
+    "internal:res3": {
+      "removed": 599,
+      "channels": 1024,
+      "removed_pct": 58.49609375
+    },
+    "internal:res4": {
+      "removed": 1882,
+      "channels": 3072,
+      "removed_pct": 61.263020833333336
+    },
+    "internal:res5": {
+      "removed": 2133,
+      "channels": 3072,
+      "removed_pct": 69.43359375
+    },
+    "residual:res2": {
+      "removed": 167,
+      "channels": 256,
+      "removed_pct": 65.234375
+    },
+    "residual:res3": {
+      "removed": 302,
+      "channels": 512,
+      "removed_pct": 58.984375
+    },
+    "residual:res4": {
+      "removed": 683,
+      "channels": 1024,
+      "removed_pct": 66.69921875
+    },
+    "residual:res5": {
+      "removed": 1555,
+      "channels": 2048,
+      "removed_pct": 75.927734375
+    },
+    "rpn": {
+      "removed": 172,
+      "channels": 256,
+      "removed_pct": 67.1875
+    },
+    "stem": {
+      "removed": 26,
+      "channels": 64,
+      "removed_pct": 40.625
+    }
+  },
+  "channel_map": [
+    {
+      "uid": 0,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "backbone.fpn_lateral2",
+        "backbone.fpn_lateral3",
+        "backbone.fpn_lateral4",
+        "backbone.fpn_lateral5"
+      ],
+      "channels": 256,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (backbone.fpn_)"
+    },
+    {
+      "uid": 1,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "backbone.fpn_output2",
+        "backbone.fpn_output3",
+        "backbone.fpn_output4",
+        "backbone.fpn_output5"
+      ],
+      "channels": 256,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (backbone.fpn_)"
+    },
+    {
+      "uid": 2,
+      "label": "stem",
+      "stage": null,
+      "members": [
+        "backbone.bottom_up.stem.conv1"
+      ],
+      "channels": 64,
+      "removed": 26,
+      "removed_pct": 40.625,
+      "protected_reason": null
+    },
+    {
+      "uid": 3,
+      "label": "residual",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.0.conv3",
+        "backbone.bottom_up.res2.0.shortcut",
+        "backbone.bottom_up.res2.1.conv3",
+        "backbone.bottom_up.res2.2.conv3"
+      ],
+      "channels": 256,
+      "removed": 167,
+      "removed_pct": 65.234375,
+      "protected_reason": null
+    },
+    {
+      "uid": 4,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.0.conv1"
+      ],
+      "channels": 64,
+      "removed": 29,
+      "removed_pct": 45.3125,
+      "protected_reason": null
+    },
+    {
+      "uid": 5,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.0.conv2"
+      ],
+      "channels": 64,
+      "removed": 43,
+      "removed_pct": 67.1875,
+      "protected_reason": null
+    },
+    {
+      "uid": 6,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.1.conv1"
+      ],
+      "channels": 64,
+      "removed": 26,
+      "removed_pct": 40.625,
+      "protected_reason": null
+    },
+    {
+      "uid": 7,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.1.conv2"
+      ],
+      "channels": 64,
+      "removed": 33,
+      "removed_pct": 51.5625,
+      "protected_reason": null
+    },
+    {
+      "uid": 8,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.2.conv1"
+      ],
+      "channels": 64,
+      "removed": 44,
+      "removed_pct": 68.75,
+      "protected_reason": null
+    },
+    {
+      "uid": 9,
+      "label": "internal",
+      "stage": "res2",
+      "members": [
+        "backbone.bottom_up.res2.2.conv2"
+      ],
+      "channels": 64,
+      "removed": 42,
+      "removed_pct": 65.625,
+      "protected_reason": null
+    },
+    {
+      "uid": 10,
+      "label": "residual",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.0.conv3",
+        "backbone.bottom_up.res3.0.shortcut",
+        "backbone.bottom_up.res3.1.conv3",
+        "backbone.bottom_up.res3.2.conv3",
+        "backbone.bottom_up.res3.3.conv3"
+      ],
+      "channels": 512,
+      "removed": 302,
+      "removed_pct": 58.984375,
+      "protected_reason": null
+    },
+    {
+      "uid": 11,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.0.conv1"
+      ],
+      "channels": 128,
+      "removed": 72,
+      "removed_pct": 56.25,
+      "protected_reason": null
+    },
+    {
+      "uid": 12,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.0.conv2"
+      ],
+      "channels": 128,
+      "removed": 68,
+      "removed_pct": 53.125,
+      "protected_reason": null
+    },
+    {
+      "uid": 13,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.1.conv1"
+      ],
+      "channels": 128,
+      "removed": 81,
+      "removed_pct": 63.28125,
+      "protected_reason": null
+    },
+    {
+      "uid": 14,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.1.conv2"
+      ],
+      "channels": 128,
+      "removed": 65,
+      "removed_pct": 50.78125,
+      "protected_reason": null
+    },
+    {
+      "uid": 15,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.2.conv1"
+      ],
+      "channels": 128,
+      "removed": 88,
+      "removed_pct": 68.75,
+      "protected_reason": null
+    },
+    {
+      "uid": 16,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.2.conv2"
+      ],
+      "channels": 128,
+      "removed": 66,
+      "removed_pct": 51.5625,
+      "protected_reason": null
+    },
+    {
+      "uid": 17,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.3.conv1"
+      ],
+      "channels": 128,
+      "removed": 86,
+      "removed_pct": 67.1875,
+      "protected_reason": null
+    },
+    {
+      "uid": 18,
+      "label": "internal",
+      "stage": "res3",
+      "members": [
+        "backbone.bottom_up.res3.3.conv2"
+      ],
+      "channels": 128,
+      "removed": 73,
+      "removed_pct": 57.03125,
+      "protected_reason": null
+    },
+    {
+      "uid": 19,
+      "label": "residual",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.0.conv3",
+        "backbone.bottom_up.res4.0.shortcut",
+        "backbone.bottom_up.res4.1.conv3",
+        "backbone.bottom_up.res4.2.conv3",
+        "backbone.bottom_up.res4.3.conv3",
+        "backbone.bottom_up.res4.4.conv3",
+        "backbone.bottom_up.res4.5.conv3"
+      ],
+      "channels": 1024,
+      "removed": 683,
+      "removed_pct": 66.69921875,
+      "protected_reason": null
+    },
+    {
+      "uid": 20,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.0.conv1"
+      ],
+      "channels": 256,
+      "removed": 169,
+      "removed_pct": 66.015625,
+      "protected_reason": null
+    },
+    {
+      "uid": 21,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.0.conv2"
+      ],
+      "channels": 256,
+      "removed": 139,
+      "removed_pct": 54.296875,
+      "protected_reason": null
+    },
+    {
+      "uid": 22,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.1.conv1"
+      ],
+      "channels": 256,
+      "removed": 138,
+      "removed_pct": 53.90625,
+      "protected_reason": null
+    },
+    {
+      "uid": 23,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.1.conv2"
+      ],
+      "channels": 256,
+      "removed": 151,
+      "removed_pct": 58.984375,
+      "protected_reason": null
+    },
+    {
+      "uid": 24,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.2.conv1"
+      ],
+      "channels": 256,
+      "removed": 162,
+      "removed_pct": 63.28125,
+      "protected_reason": null
+    },
+    {
+      "uid": 25,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.2.conv2"
+      ],
+      "channels": 256,
+      "removed": 164,
+      "removed_pct": 64.0625,
+      "protected_reason": null
+    },
+    {
+      "uid": 26,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.3.conv1"
+      ],
+      "channels": 256,
+      "removed": 134,
+      "removed_pct": 52.34375,
+      "protected_reason": null
+    },
+    {
+      "uid": 27,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.3.conv2"
+      ],
+      "channels": 256,
+      "removed": 136,
+      "removed_pct": 53.125,
+      "protected_reason": null
+    },
+    {
+      "uid": 28,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.4.conv1"
+      ],
+      "channels": 256,
+      "removed": 136,
+      "removed_pct": 53.125,
+      "protected_reason": null
+    },
+    {
+      "uid": 29,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.4.conv2"
+      ],
+      "channels": 256,
+      "removed": 182,
+      "removed_pct": 71.09375,
+      "protected_reason": null
+    },
+    {
+      "uid": 30,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.5.conv1"
+      ],
+      "channels": 256,
+      "removed": 173,
+      "removed_pct": 67.578125,
+      "protected_reason": null
+    },
+    {
+      "uid": 31,
+      "label": "internal",
+      "stage": "res4",
+      "members": [
+        "backbone.bottom_up.res4.5.conv2"
+      ],
+      "channels": 256,
+      "removed": 198,
+      "removed_pct": 77.34375,
+      "protected_reason": null
+    },
+    {
+      "uid": 32,
+      "label": "residual",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.0.conv3",
+        "backbone.bottom_up.res5.0.shortcut",
+        "backbone.bottom_up.res5.1.conv3",
+        "backbone.bottom_up.res5.2.conv3"
+      ],
+      "channels": 2048,
+      "removed": 1555,
+      "removed_pct": 75.927734375,
+      "protected_reason": null
+    },
+    {
+      "uid": 33,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.0.conv1"
+      ],
+      "channels": 512,
+      "removed": 332,
+      "removed_pct": 64.84375,
+      "protected_reason": null
+    },
+    {
+      "uid": 34,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.0.conv2"
+      ],
+      "channels": 512,
+      "removed": 311,
+      "removed_pct": 60.7421875,
+      "protected_reason": null
+    },
+    {
+      "uid": 35,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.1.conv1"
+      ],
+      "channels": 512,
+      "removed": 367,
+      "removed_pct": 71.6796875,
+      "protected_reason": null
+    },
+    {
+      "uid": 36,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.1.conv2"
+      ],
+      "channels": 512,
+      "removed": 362,
+      "removed_pct": 70.703125,
+      "protected_reason": null
+    },
+    {
+      "uid": 37,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.2.conv1"
+      ],
+      "channels": 512,
+      "removed": 363,
+      "removed_pct": 70.8984375,
+      "protected_reason": null
+    },
+    {
+      "uid": 38,
+      "label": "internal",
+      "stage": "res5",
+      "members": [
+        "backbone.bottom_up.res5.2.conv2"
+      ],
+      "channels": 512,
+      "removed": 398,
+      "removed_pct": 77.734375,
+      "protected_reason": null
+    },
+    {
+      "uid": 39,
+      "label": "rpn",
+      "stage": null,
+      "members": [
+        "proposal_generator.rpn_head.conv"
+      ],
+      "channels": 256,
+      "removed": 172,
+      "removed_pct": 67.1875,
+      "protected_reason": null
+    },
+    {
+      "uid": 40,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "proposal_generator.rpn_head.objectness_logits"
+      ],
+      "channels": 3,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (proposal_generator.rpn_head.objectness_logits)"
+    },
+    {
+      "uid": 41,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "proposal_generator.rpn_head.anchor_deltas"
+      ],
+      "channels": 12,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (proposal_generator.rpn_head.anchor_deltas)"
+    },
+    {
+      "uid": 42,
+      "label": "fc",
+      "stage": null,
+      "members": [
+        "roi_heads.box_head.fc1"
+      ],
+      "channels": 1024,
+      "removed": 231,
+      "removed_pct": 22.55859375,
+      "protected_reason": null
+    },
+    {
+      "uid": 43,
+      "label": "fc",
+      "stage": null,
+      "members": [
+        "roi_heads.box_head.fc2"
+      ],
+      "channels": 1024,
+      "removed": 387,
+      "removed_pct": 37.79296875,
+      "protected_reason": null
+    },
+    {
+      "uid": 44,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "roi_heads.box_predictor.cls_score"
+      ],
+      "channels": 4,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (roi_heads.box_predictor)"
+    },
+    {
+      "uid": 45,
+      "label": "other",
+      "stage": null,
+      "members": [
+        "roi_heads.box_predictor.bbox_pred"
+      ],
+      "channels": 12,
+      "removed": 0,
+      "removed_pct": 0.0,
+      "protected_reason": "exclusion dure (roi_heads.box_predictor)"
+    }
+  ],
+  "rejected": [],
+  "gates": {
+    "no_rejected_group": true,
+    "params_equal_prediction": true,
+    "fewer_params": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 0,
+    "finite_parameters": true,
+    "checkpoint_bytes": 63584371,
+    "checkpoint_size_matches_params": true,
+    "reload_ok": true
+  }
+}

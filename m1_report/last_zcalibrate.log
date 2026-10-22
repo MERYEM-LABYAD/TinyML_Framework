@@ -1,0 +1,182 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+GRAPH: hook actif sur proposal_generator.rpn_head
+GRAPH: hook actif sur roi_heads.box_predictor
+GRAPH: noeuds = 274
+
+######## groupe=layer  ecretage=(1.0, 99.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 68.6 % (rapport 51.8) err=16.8 pts ecart_blocs= 27.0 | fc1: moy 48 % [48-48] (rapport 99-99)  fc2: moy 78 % [78-78] (rapport 98-98)  rpn: moy 78 % [78-78] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 68.9 % (rapport 48.6) err=20.3 pts ecart_blocs= 31.8 | fc1: moy 23 % [23-23] (rapport 13-13)  fc2: moy 59 % [59-59] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 36.2 % (rapport 18.4) err=17.8 pts ecart_blocs=  9.9 | residual: moy 55 % [45-67] (rapport 39-48)  internal: moy 19 % [1-58] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 36.5 % (rapport 31.5) err= 5.0 pts ecart_blocs= 17.8 | internal: moy 29 % [2-67] (rapport 42-49)  residual: moy 28 % [16-46] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 37.8 % (rapport 41.8) err= 4.0 pts ecart_blocs= 11.7 | internal: moy 26 % [2-64] (rapport 40-49)  residual: moy 43 % [34-59] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 45.1 % (rapport 57.6) err=12.5 pts ecart_blocs= 20.4 | internal: moy 34 % [2-72] (rapport 72-79)  residual: moy 55 % [45-67] (rapport 72-79)  fc1: moy 3 % [3-3] (rapport 10-10)  fc2: moy 22 % [22-22] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 73.0 % (rapport 61.7) err=11.3 pts ecart_blocs=  5.5 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 98 % [97-99] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.82 pts ; ecart moyen des blocs = 16.17 pts
+
+######## groupe=layer  ecretage=(5.0, 95.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 68.1 % (rapport 51.8) err=16.3 pts ecart_blocs= 28.7 | fc1: moy 53 % [53-53] (rapport 99-99)  fc2: moy 67 % [67-67] (rapport 98-98)  rpn: moy 78 % [78-78] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.3 % (rapport 48.6) err=20.7 pts ecart_blocs= 27.9 | fc1: moy 27 % [27-27] (rapport 13-13)  fc2: moy 48 % [48-48] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 32.4 % (rapport 18.4) err=14.0 pts ecart_blocs=  6.7 | residual: moy 48 % [38-58] (rapport 39-48)  internal: moy 17 % [2-41] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 32.7 % (rapport 31.5) err= 1.2 pts ecart_blocs= 14.4 | internal: moy 27 % [5-52] (rapport 42-49)  residual: moy 23 % [12-38] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 34.1 % (rapport 41.8) err= 7.7 pts ecart_blocs= 12.1 | internal: moy 23 % [2-49] (rapport 40-49)  residual: moy 36 % [26-51] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 41.9 % (rapport 57.6) err=15.7 pts ecart_blocs= 20.5 | internal: moy 32 % [5-58] (rapport 72-79)  residual: moy 48 % [38-58] (rapport 72-79)  fc1: moy 4 % [4-4] (rapport 10-10)  fc2: moy 15 % [15-15] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.1 % (rapport 61.7) err= 9.4 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.48 pts ; ecart moyen des blocs = 14.57 pts
+
+######## groupe=layer  ecretage=(10.0, 90.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 67.8 % (rapport 51.8) err=16.0 pts ecart_blocs= 28.3 | fc1: moy 55 % [55-55] (rapport 99-99)  fc2: moy 63 % [63-63] (rapport 98-98)  rpn: moy 74 % [74-74] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.5 % (rapport 48.6) err=20.9 pts ecart_blocs= 26.3 | fc1: moy 29 % [29-29] (rapport 13-13)  fc2: moy 43 % [43-43] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 29.6 % (rapport 18.4) err=11.2 pts ecart_blocs=  5.0 | residual: moy 40 % [33-52] (rapport 39-48)  internal: moy 15 % [2-34] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 30.0 % (rapport 31.5) err= 1.5 pts ecart_blocs= 12.8 | internal: moy 25 % [5-44] (rapport 42-49)  residual: moy 19 % [10-32] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 31.0 % (rapport 41.8) err=10.8 pts ecart_blocs= 14.4 | internal: moy 22 % [5-41] (rapport 40-49)  residual: moy 31 % [22-44] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 39.5 % (rapport 57.6) err=18.1 pts ecart_blocs= 21.8 | internal: moy 31 % [6-49] (rapport 72-79)  residual: moy 41 % [34-52] (rapport 72-79)  fc1: moy 6 % [6-6] (rapport 10-10)  fc2: moy 13 % [13-13] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.2 % (rapport 61.7) err= 9.5 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.99 pts ; ecart moyen des blocs = 14.36 pts
+
+######## groupe=layer  ecretage=None ########
+  uniform_local          r=0.8 s=0.8 reduction= 65.9 % (rapport 51.8) err=14.1 pts ecart_blocs= 25.0 | fc1: moy 42 % [42-42] (rapport 99-99)  fc2: moy 98 % [98-98] (rapport 98-98)  rpn: moy 50 % [50-50] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 66.4 % (rapport 48.6) err=17.8 pts ecart_blocs= 48.5 | fc1: moy 21 % [21-21] (rapport 13-13)  fc2: moy 95 % [95-95] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 41.2 % (rapport 18.4) err=22.8 pts ecart_blocs= 20.0 | residual: moy 36 % [2-91] (rapport 39-48)  internal: moy 17 % [0-92] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 40.1 % (rapport 31.5) err= 8.6 pts ecart_blocs= 24.9 | internal: moy 22 % [0-97] (rapport 42-49)  residual: moy 24 % [0-78] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 41.3 % (rapport 41.8) err= 0.5 pts ecart_blocs= 30.1 | internal: moy 20 % [0-96] (rapport 40-49)  residual: moy 31 % [1-87] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 46.4 % (rapport 57.6) err=11.2 pts ecart_blocs= 39.7 | internal: moy 25 % [0-98] (rapport 72-79)  residual: moy 37 % [2-92] (rapport 72-79)  fc1: moy 1 % [1-1] (rapport 10-10)  fc2: moy 60 % [60-60] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 72.1 % (rapport 61.7) err=10.4 pts ecart_blocs= 20.9 | internal: moy 69 % [2-98] (rapport 77-91)  residual: moy 75 % [15-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.86 pts ; ecart moyen des blocs = 30.69 pts
+
+######## groupe=unit  ecretage=(1.0, 99.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 68.6 % (rapport 51.8) err=16.8 pts ecart_blocs= 27.1 | fc1: moy 48 % [48-48] (rapport 99-99)  fc2: moy 78 % [78-78] (rapport 98-98)  rpn: moy 78 % [78-78] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 68.9 % (rapport 48.6) err=20.3 pts ecart_blocs= 31.8 | fc1: moy 23 % [23-23] (rapport 13-13)  fc2: moy 59 % [59-59] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 36.5 % (rapport 18.4) err=18.1 pts ecart_blocs= 12.0 | residual: moy 60 % [46-80] (rapport 39-48)  internal: moy 19 % [1-58] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 36.6 % (rapport 31.5) err= 5.1 pts ecart_blocs= 19.6 | internal: moy 29 % [2-67] (rapport 42-49)  residual: moy 31 % [16-48] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 38.0 % (rapport 41.8) err= 3.8 pts ecart_blocs= 14.2 | internal: moy 26 % [2-64] (rapport 40-49)  residual: moy 49 % [33-69] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 45.3 % (rapport 57.6) err=12.3 pts ecart_blocs= 19.7 | internal: moy 34 % [2-72] (rapport 72-79)  residual: moy 60 % [46-80] (rapport 72-79)  fc1: moy 2 % [2-2] (rapport 10-10)  fc2: moy 22 % [22-22] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 73.0 % (rapport 61.7) err=11.3 pts ecart_blocs=  5.5 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 98 % [97-99] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.80 pts ; ecart moyen des blocs = 17.12 pts
+
+######## groupe=unit  ecretage=(5.0, 95.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 68.0 % (rapport 51.8) err=16.2 pts ecart_blocs= 28.6 | fc1: moy 53 % [53-53] (rapport 99-99)  fc2: moy 67 % [67-67] (rapport 98-98)  rpn: moy 77 % [77-77] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.3 % (rapport 48.6) err=20.7 pts ecart_blocs= 27.8 | fc1: moy 27 % [27-27] (rapport 13-13)  fc2: moy 48 % [48-48] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 32.4 % (rapport 18.4) err=14.0 pts ecart_blocs=  7.2 | residual: moy 50 % [39-62] (rapport 39-48)  internal: moy 16 % [2-41] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 32.7 % (rapport 31.5) err= 1.2 pts ecart_blocs= 14.8 | internal: moy 27 % [5-52] (rapport 42-49)  residual: moy 24 % [12-38] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 34.1 % (rapport 41.8) err= 7.7 pts ecart_blocs= 11.7 | internal: moy 23 % [2-49] (rapport 40-49)  residual: moy 38 % [27-51] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 41.9 % (rapport 57.6) err=15.7 pts ecart_blocs= 20.0 | internal: moy 32 % [5-58] (rapport 72-79)  residual: moy 50 % [39-62] (rapport 72-79)  fc1: moy 4 % [4-4] (rapport 10-10)  fc2: moy 15 % [15-15] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.1 % (rapport 61.7) err= 9.4 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.46 pts ; ecart moyen des blocs = 14.58 pts
+
+######## groupe=unit  ecretage=(10.0, 90.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 67.8 % (rapport 51.8) err=16.0 pts ecart_blocs= 28.3 | fc1: moy 55 % [55-55] (rapport 99-99)  fc2: moy 63 % [63-63] (rapport 98-98)  rpn: moy 74 % [74-74] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.5 % (rapport 48.6) err=20.9 pts ecart_blocs= 26.3 | fc1: moy 29 % [29-29] (rapport 13-13)  fc2: moy 43 % [43-43] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 29.6 % (rapport 18.4) err=11.2 pts ecart_blocs=  4.7 | residual: moy 41 % [35-52] (rapport 39-48)  internal: moy 15 % [2-34] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 30.0 % (rapport 31.5) err= 1.5 pts ecart_blocs= 13.2 | internal: moy 25 % [5-44] (rapport 42-49)  residual: moy 19 % [10-32] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 31.0 % (rapport 41.8) err=10.8 pts ecart_blocs= 14.1 | internal: moy 22 % [5-41] (rapport 40-49)  residual: moy 31 % [22-44] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 39.6 % (rapport 57.6) err=18.0 pts ecart_blocs= 21.6 | internal: moy 31 % [6-49] (rapport 72-79)  residual: moy 41 % [35-52] (rapport 72-79)  fc1: moy 6 % [6-6] (rapport 10-10)  fc2: moy 13 % [13-13] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.2 % (rapport 61.7) err= 9.5 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.99 pts ; ecart moyen des blocs = 14.30 pts
+
+######## groupe=unit  ecretage=None ########
+  uniform_local          r=0.8 s=0.8 reduction= 66.7 % (rapport 51.8) err=14.9 pts ecart_blocs= 26.5 | fc1: moy 39 % [39-39] (rapport 99-99)  fc2: moy 98 % [98-98] (rapport 98-98)  rpn: moy 48 % [48-48] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 66.7 % (rapport 48.6) err=18.1 pts ecart_blocs= 47.9 | fc1: moy 21 % [21-21] (rapport 13-13)  fc2: moy 94 % [94-94] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 43.6 % (rapport 18.4) err=25.2 pts ecart_blocs= 22.2 | residual: moy 47 % [6-97] (rapport 39-48)  internal: moy 15 % [0-90] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 42.0 % (rapport 31.5) err=10.5 pts ecart_blocs= 29.5 | internal: moy 20 % [0-96] (rapport 42-49)  residual: moy 33 % [2-89] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 43.8 % (rapport 41.8) err= 2.0 pts ecart_blocs= 31.2 | internal: moy 19 % [0-94] (rapport 40-49)  residual: moy 42 % [4-94] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 48.5 % (rapport 57.6) err= 9.1 pts ecart_blocs= 37.5 | internal: moy 24 % [0-97] (rapport 72-79)  residual: moy 48 % [7-97] (rapport 72-79)  fc1: moy 1 % [1-1] (rapport 10-10)  fc2: moy 58 % [58-58] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 72.3 % (rapport 61.7) err=10.6 pts ecart_blocs= 15.0 | internal: moy 68 % [2-98] (rapport 77-91)  residual: moy 92 % [70-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 12.57 pts ; ecart moyen des blocs = 30.55 pts
+
+######## groupe=label  ecretage=(1.0, 99.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 62.8 % (rapport 51.8) err=11.0 pts ecart_blocs= 46.1 | fc1: moy 49 % [49-49] (rapport 99-99)  fc2: moy 15 % [15-15] (rapport 98-98)  rpn: moy 73 % [73-73] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 64.1 % (rapport 48.6) err=15.5 pts ecart_blocs=  8.4 | fc1: moy 27 % [27-27] (rapport 13-13)  fc2: moy 9 % [9-9] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 37.9 % (rapport 18.4) err=19.5 pts ecart_blocs= 23.6 | residual: moy 28 % [0-92] (rapport 39-48)  internal: moy 16 % [0-89] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 38.5 % (rapport 31.5) err= 7.0 pts ecart_blocs= 26.8 | internal: moy 19 % [0-94] (rapport 42-49)  residual: moy 22 % [0-80] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 38.9 % (rapport 41.8) err= 2.9 pts ecart_blocs= 35.7 | internal: moy 18 % [0-92] (rapport 40-49)  residual: moy 25 % [0-89] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 42.4 % (rapport 57.6) err=15.2 pts ecart_blocs= 29.3 | internal: moy 22 % [0-96] (rapport 72-79)  residual: moy 28 % [0-93] (rapport 72-79)  fc1: moy 2 % [2-2] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.8 % (rapport 61.7) err=10.1 pts ecart_blocs= 30.9 | internal: moy 61 % [0-98] (rapport 77-91)  residual: moy 55 % [0-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.70 pts ; ecart moyen des blocs = 25.78 pts
+
+######## groupe=label  ecretage=(5.0, 95.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 62.7 % (rapport 51.8) err=10.9 pts ecart_blocs= 44.2 | fc1: moy 53 % [53-53] (rapport 99-99)  fc2: moy 17 % [17-17] (rapport 98-98)  rpn: moy 74 % [74-74] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 63.8 % (rapport 48.6) err=15.2 pts ecart_blocs= 10.7 | fc1: moy 30 % [30-30] (rapport 13-13)  fc2: moy 10 % [10-10] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 36.0 % (rapport 18.4) err=17.6 pts ecart_blocs= 23.4 | residual: moy 24 % [0-88] (rapport 39-48)  internal: moy 14 % [0-86] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 37.0 % (rapport 31.5) err= 5.5 pts ecart_blocs= 26.0 | internal: moy 18 % [0-92] (rapport 42-49)  residual: moy 19 % [0-73] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 37.3 % (rapport 41.8) err= 4.5 pts ecart_blocs= 35.7 | internal: moy 17 % [0-91] (rapport 40-49)  residual: moy 22 % [0-83] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 41.2 % (rapport 57.6) err=16.4 pts ecart_blocs= 29.1 | internal: moy 20 % [0-95] (rapport 72-79)  residual: moy 25 % [0-89] (rapport 72-79)  fc1: moy 4 % [4-4] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.9 % (rapport 61.7) err=10.2 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.59 pts ; ecart moyen des blocs = 21.80 pts
+
+######## groupe=label  ecretage=(10.0, 90.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 62.8 % (rapport 51.8) err=11.0 pts ecart_blocs= 42.1 | fc1: moy 57 % [57-57] (rapport 99-99)  fc2: moy 19 % [19-19] (rapport 98-98)  rpn: moy 74 % [74-74] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 63.6 % (rapport 48.6) err=15.0 pts ecart_blocs= 12.7 | fc1: moy 34 % [34-34] (rapport 13-13)  fc2: moy 11 % [11-11] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 34.6 % (rapport 18.4) err=16.2 pts ecart_blocs= 22.7 | residual: moy 22 % [0-83] (rapport 39-48)  internal: moy 13 % [0-82] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 35.6 % (rapport 31.5) err= 4.1 pts ecart_blocs= 25.3 | internal: moy 17 % [0-91] (rapport 42-49)  residual: moy 17 % [0-66] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 35.6 % (rapport 41.8) err= 6.2 pts ecart_blocs= 35.4 | internal: moy 16 % [0-89] (rapport 40-49)  residual: moy 20 % [0-77] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 40.0 % (rapport 57.6) err=17.6 pts ecart_blocs= 28.7 | internal: moy 19 % [0-93] (rapport 72-79)  residual: moy 23 % [0-84] (rapport 72-79)  fc1: moy 5 % [5-5] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.9 % (rapport 61.7) err=10.2 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.55 pts ; ecart moyen des blocs = 21.78 pts
+
+######## groupe=label  ecretage=None ########
+  uniform_local          r=0.8 s=0.8 reduction= 63.9 % (rapport 51.8) err=12.1 pts ecart_blocs= 58.3 | fc1: moy 62 % [62-62] (rapport 99-99)  fc2: moy 21 % [21-21] (rapport 98-98)  rpn: moy 7 % [7-7] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 64.1 % (rapport 48.6) err=15.5 pts ecart_blocs= 14.5 | fc1: moy 37 % [37-37] (rapport 13-13)  fc2: moy 11 % [11-11] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 36.1 % (rapport 18.4) err=17.7 pts ecart_blocs= 23.6 | residual: moy 23 % [0-84] (rapport 39-48)  internal: moy 15 % [0-89] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 37.0 % (rapport 31.5) err= 5.5 pts ecart_blocs= 25.2 | internal: moy 19 % [0-94] (rapport 42-49)  residual: moy 18 % [0-68] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 37.5 % (rapport 41.8) err= 4.3 pts ecart_blocs= 35.3 | internal: moy 18 % [0-92] (rapport 40-49)  residual: moy 21 % [0-79] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 41.0 % (rapport 57.6) err=16.6 pts ecart_blocs= 28.7 | internal: moy 22 % [0-95] (rapport 72-79)  residual: moy 23 % [0-85] (rapport 72-79)  fc1: moy 5 % [5-5] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 72.6 % (rapport 61.7) err=10.9 pts ecart_blocs= 34.4 | internal: moy 58 % [0-98] (rapport 77-91)  residual: moy 45 % [0-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 11.77 pts ; ecart moyen des blocs = 26.94 pts
+
+######## groupe=labelstage  ecretage=(1.0, 99.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 66.3 % (rapport 51.8) err=14.5 pts ecart_blocs= 41.2 | fc1: moy 61 % [61-61] (rapport 99-99)  fc2: moy 21 % [21-21] (rapport 98-98)  rpn: moy 76 % [76-76] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.3 % (rapport 48.6) err=20.7 pts ecart_blocs= 12.1 | fc1: moy 33 % [33-33] (rapport 13-13)  fc2: moy 10 % [10-10] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 32.4 % (rapport 18.4) err=14.0 pts ecart_blocs=  9.0 | residual: moy 53 % [38-73] (rapport 39-48)  internal: moy 15 % [1-52] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 31.4 % (rapport 31.5) err= 0.1 pts ecart_blocs= 18.3 | internal: moy 25 % [2-64] (rapport 42-49)  residual: moy 26 % [11-43] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 33.5 % (rapport 41.8) err= 8.3 pts ecart_blocs= 15.5 | internal: moy 22 % [2-62] (rapport 40-49)  residual: moy 41 % [25-56] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 40.3 % (rapport 57.6) err=17.3 pts ecart_blocs= 16.9 | internal: moy 30 % [3-69] (rapport 72-79)  residual: moy 52 % [37-72] (rapport 72-79)  fc1: moy 5 % [5-5] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 74.4 % (rapport 61.7) err=12.7 pts ecart_blocs=  5.5 | internal: moy 87 % [23-98] (rapport 77-91)  residual: moy 96 % [94-98] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 12.20 pts ; ecart moyen des blocs = 12.87 pts
+
+######## groupe=labelstage  ecretage=(5.0, 95.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 66.8 % (rapport 51.8) err=15.0 pts ecart_blocs= 41.7 | fc1: moy 60 % [60-60] (rapport 99-99)  fc2: moy 20 % [20-20] (rapport 98-98)  rpn: moy 76 % [76-76] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.3 % (rapport 48.6) err=20.7 pts ecart_blocs= 11.9 | fc1: moy 33 % [33-33] (rapport 13-13)  fc2: moy 10 % [10-10] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 31.5 % (rapport 18.4) err=13.1 pts ecart_blocs=  6.3 | residual: moy 47 % [36-57] (rapport 39-48)  internal: moy 15 % [1-50] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 30.8 % (rapport 31.5) err= 0.7 pts ecart_blocs= 16.5 | internal: moy 24 % [3-62] (rapport 42-49)  residual: moy 22 % [11-37] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 32.3 % (rapport 41.8) err= 9.5 pts ecart_blocs= 14.2 | internal: moy 21 % [2-60] (rapport 40-49)  residual: moy 36 % [24-49] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 39.7 % (rapport 57.6) err=17.9 pts ecart_blocs= 18.4 | internal: moy 28 % [4-66] (rapport 72-79)  residual: moy 47 % [36-57] (rapport 72-79)  fc1: moy 5 % [5-5] (rapport 10-10)  fc2: moy 2 % [2-2] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.9 % (rapport 61.7) err=10.2 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 12.04 pts ; ecart moyen des blocs = 12.21 pts
+
+######## groupe=labelstage  ecretage=(10.0, 90.0) ########
+  uniform_local          r=0.8 s=0.8 reduction= 66.9 % (rapport 51.8) err=15.1 pts ecart_blocs= 40.5 | fc1: moy 61 % [61-61] (rapport 99-99)  fc2: moy 21 % [21-21] (rapport 98-98)  rpn: moy 74 % [74-74] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 69.4 % (rapport 48.6) err=20.8 pts ecart_blocs= 12.8 | fc1: moy 34 % [34-34] (rapport 13-13)  fc2: moy 11 % [11-11] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 29.4 % (rapport 18.4) err=11.0 pts ecart_blocs=  5.3 | residual: moy 40 % [33-51] (rapport 39-48)  internal: moy 14 % [1-45] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 29.2 % (rapport 31.5) err= 2.3 pts ecart_blocs= 15.0 | internal: moy 23 % [2-60] (rapport 42-49)  residual: moy 19 % [10-32] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 30.2 % (rapport 41.8) err=11.6 pts ecart_blocs= 16.1 | internal: moy 20 % [2-55] (rapport 40-49)  residual: moy 30 % [21-43] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 37.9 % (rapport 57.6) err=19.7 pts ecart_blocs= 19.8 | internal: moy 28 % [3-63] (rapport 72-79)  residual: moy 40 % [34-51] (rapport 72-79)  fc1: moy 7 % [7-7] (rapport 10-10)  fc2: moy 3 % [3-3] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 71.9 % (rapport 61.7) err=10.2 pts ecart_blocs=  5.9 | internal: moy 95 % [88-98] (rapport 77-91)  residual: moy 99 % [97-100] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 12.60 pts ; ecart moyen des blocs = 12.48 pts
+
+######## groupe=labelstage  ecretage=None ########
+  uniform_local          r=0.8 s=0.8 reduction= 64.0 % (rapport 51.8) err=12.2 pts ecart_blocs= 27.8 | fc1: moy 99 % [99-99] (rapport 99-99)  fc2: moy 67 % [67-67] (rapport 98-98)  rpn: moy 16 % [16-16] (rapport 68-68)
+  protect_head           r=0.8 s=0.8 reduction= 64.0 % (rapport 48.6) err=15.4 pts ecart_blocs= 49.6 | fc1: moy 82 % [82-82] (rapport 13-13)  fc2: moy 36 % [36-36] (rapport 6-6)
+  expose_residual        r=0.55 s=0.8 reduction= 23.0 % (rapport 18.4) err= 4.6 pts ecart_blocs= 14.8 | residual: moy 12 % [0-45] (rapport 39-48)  internal: moy 3 % [0-25] (rapport 0-10)
+  expose_internal        r=0.55 s=0.8 reduction= 22.2 % (rapport 31.5) err= 9.3 pts ecart_blocs= 20.5 | internal: moy 5 % [0-40] (rapport 42-49)  residual: moy 7 % [0-27] (rapport 0-10)
+  expose_whole_backbone  r=0.55 s=0.8 reduction= 22.8 % (rapport 41.8) err=19.0 pts ecart_blocs= 32.7 | internal: moy 5 % [0-36] (rapport 40-49)  residual: moy 10 % [0-38] (rapport 40-49)
+  aggressive             r=0.6 s=0.8 reduction= 29.5 % (rapport 57.6) err=28.1 pts ecart_blocs= 39.6 | internal: moy 6 % [0-44] (rapport 72-79)  residual: moy 11 % [0-43] (rapport 72-79)  fc1: moy 34 % [34-34] (rapport 10-10)  fc2: moy 11 % [11-11] (rapport 3-3)
+  maximal                r=0.9 s=0.9 reduction= 72.3 % (rapport 61.7) err=10.6 pts ecart_blocs= 50.0 | internal: moy 28 % [0-89] (rapport 77-91)  residual: moy 28 % [0-83] (rapport 77-91)
+  ==> erreur moyenne de reduction (6 configs) = 14.50 pts ; ecart moyen des blocs = 34.50 pts
+
+CLASSEMENT (erreur de reduction vs rapport, puis ecart des blocs) :
+   groupe=unit       ecretage=(5.0, 95.0)  erreur reduction 11.46 pts | ecart blocs 14.58 pts
+   groupe=layer      ecretage=(5.0, 95.0)  erreur reduction 11.48 pts | ecart blocs 14.57 pts
+   groupe=label      ecretage=(10.0, 90.0) erreur reduction 11.55 pts | ecart blocs 21.78 pts
+   groupe=label      ecretage=(5.0, 95.0)  erreur reduction 11.59 pts | ecart blocs 21.80 pts
+   groupe=label      ecretage=(1.0, 99.0)  erreur reduction 11.70 pts | ecart blocs 25.78 pts
+   groupe=label      ecretage=None         erreur reduction 11.77 pts | ecart blocs 26.94 pts
+   groupe=unit       ecretage=(1.0, 99.0)  erreur reduction 11.80 pts | ecart blocs 17.12 pts
+   groupe=layer      ecretage=(1.0, 99.0)  erreur reduction 11.82 pts | ecart blocs 16.17 pts
+   groupe=layer      ecretage=None         erreur reduction 11.86 pts | ecart blocs 30.69 pts
+   groupe=unit       ecretage=(10.0, 90.0) erreur reduction 11.99 pts | ecart blocs 14.30 pts
+   groupe=layer      ecretage=(10.0, 90.0) erreur reduction 11.99 pts | ecart blocs 14.36 pts
+   groupe=labelstage ecretage=(5.0, 95.0)  erreur reduction 12.04 pts | ecart blocs 12.21 pts
+   groupe=labelstage ecretage=(1.0, 99.0)  erreur reduction 12.20 pts | ecart blocs 12.87 pts
+   groupe=unit       ecretage=None         erreur reduction 12.57 pts | ecart blocs 30.55 pts
+   groupe=labelstage ecretage=(10.0, 90.0) erreur reduction 12.60 pts | ecart blocs 12.48 pts
+   groupe=labelstage ecretage=None         erreur reduction 14.50 pts | ecart blocs 34.50 pts

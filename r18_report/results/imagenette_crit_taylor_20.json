@@ -1,0 +1,20 @@
+{
+  "criterion": "taylor",
+  "target": 20,
+  "params_reduction_pct": 20.249047501252498,
+  "channel_ratio": 0.2,
+  "params_M": 8.917466,
+  "pruned": {
+    "acc": 67.0,
+    "precision": 84.59300229216853,
+    "recall": 67.0,
+    "f1": 68.91149154542735
+  },
+  "distilled": {
+    "acc": 93.6,
+    "precision": 93.74401331967101,
+    "recall": 93.6,
+    "f1": 93.63709258851512
+  },
+  "engine": "framework"
+}

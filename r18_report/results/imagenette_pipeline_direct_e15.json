@@ -1,0 +1,56 @@
+{
+  "engine": "direct",
+  "backend": "fbgemm",
+  "params_reduction_pct": 81.05983897534905,
+  "stages": [
+    {
+      "acc": 95.0,
+      "precision": 95.05836153509976,
+      "recall": 95.0,
+      "f1": 95.01740573328495,
+      "params_M": 11.181642,
+      "size_mb": 44.803531,
+      "latency_ms": 14.63840399998162,
+      "tag": "Stage 0 FP32 baseline",
+      "macs_M": 594.834442
+    },
+    {
+      "acc": 10.0,
+      "precision": 1.0,
+      "recall": 10.0,
+      "f1": 1.8181818181818181,
+      "params_M": 2.117821,
+      "size_mb": 8.524299,
+      "latency_ms": 7.9723105000084615,
+      "tag": "Stage 1 structured pruned",
+      "macs_M": 161.47645
+    },
+    {
+      "acc": 92.2,
+      "precision": 92.35814881464395,
+      "recall": 92.19999999999999,
+      "f1": 92.23384700623687,
+      "params_M": 2.117821,
+      "size_mb": 8.524299,
+      "latency_ms": 7.875684500049829,
+      "tag": "Stage 2 KD recovery",
+      "macs_M": 161.47645
+    },
+    {
+      "acc": 92.0,
+      "precision": 92.17225838149126,
+      "recall": 92.0,
+      "f1": 92.03563924296512,
+      "params_M": 2.117821,
+      "size_mb": 2.197535,
+      "latency_ms": 5.0334060000523095,
+      "tag": "Stage 3 INT8 PTQ",
+      "macs_M": 161.47645
+    }
+  ],
+  "pruner_log": [],
+  "framework": {
+    "ok": false,
+    "note": "moteur direct (controle)"
+  }
+}

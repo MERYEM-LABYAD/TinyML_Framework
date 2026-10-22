@@ -1,0 +1,90 @@
+{
+  "engine": "framework",
+  "backend": "fbgemm",
+  "params_reduction_pct": 81.24788827973566,
+  "stages": [
+    {
+      "acc": 95.0,
+      "precision": 95.05836153509976,
+      "recall": 95.0,
+      "f1": 95.01740573328495,
+      "params_M": 11.181642,
+      "size_mb": 44.803531,
+      "latency_ms": 14.152613500016287,
+      "tag": "Stage 0 FP32 baseline",
+      "macs_M": 594.834442
+    },
+    {
+      "acc": 11.52,
+      "precision": 12.373057258155624,
+      "recall": 11.520000000000001,
+      "f1": 4.623698450842272,
+      "params_M": 2.096794,
+      "size_mb": 8.446539,
+      "latency_ms": 9.813253000004352,
+      "tag": "Stage 1 structured pruned",
+      "macs_M": 326.703274
+    },
+    {
+      "acc": 90.52,
+      "precision": 90.56033338823632,
+      "recall": 90.52,
+      "f1": 90.50521965185348,
+      "params_M": 2.096794,
+      "size_mb": 8.446539,
+      "latency_ms": 9.915448500009916,
+      "tag": "Stage 2 KD recovery",
+      "macs_M": 326.703274
+    },
+    {
+      "acc": 90.44,
+      "precision": 90.49131857684637,
+      "recall": 90.43999999999998,
+      "f1": 90.42854854059088,
+      "params_M": 2.096794,
+      "size_mb": 2.187103,
+      "latency_ms": 5.7339989999718455,
+      "tag": "Stage 3 INT8 PTQ",
+      "macs_M": 326.703274
+    }
+  ],
+  "pruner_log": [
+    {
+      "target_pct": 81.0,
+      "achieved_pct": 81.24788827973566,
+      "groups_accepted": 51,
+      "groups_rejected": 0,
+      "target_reached": true,
+      "seconds": 22.18686318397522
+    }
+  ],
+  "framework": {
+    "ok": true,
+    "framework": "TorchVision",
+    "architecture": "ResNet",
+    "parameters": 11181642,
+    "module_statistics": {
+      "AdaptiveAvgPool2d": 1,
+      "BasicBlock": 8,
+      "BatchNorm2d": 20,
+      "Conv2d": 20,
+      "Linear": 1,
+      "MaxPool2d": 1,
+      "ReLU": 9,
+      "ResNet": 1,
+      "Sequential": 7
+    },
+    "registered": [
+      "S0_baseline",
+      "S1_pruned",
+      "S2_distilled"
+    ],
+    "validation": {
+      "S1_pruned": {
+        "parameters": 2096794,
+        "forward": true,
+        "output_type": "Tensor"
+      }
+    }
+  }
+}

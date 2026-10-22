@@ -1,0 +1,4 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+[SCORE] 300 images (graine 0), seuil : sommes |w*grad| par canal
+[SCORE] reprise a l'image 300
+[SCORE] ecrit : E:\Stage2\TinyML_Framework\m1_report\taylor_scores_m0_8000.pt  (68 modules)

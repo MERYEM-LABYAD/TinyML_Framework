@@ -1,0 +1,44 @@
+{
+  "mode": "matched",
+  "n_images": 300,
+  "seed": 1,
+  "refine_passes": 0,
+  "refine_images": 150,
+  "init": "sequential",
+  "n_seq_images": 60,
+  "seq_rounds": 3,
+  "drift_between_refine_passes": [],
+  "counters": {
+    "channels_total": 9117,
+    "var_clamped": 0,
+    "round_drifts": [
+      [
+        0.027702639021845835,
+        0.11317894253738779
+      ],
+      [
+        0.19917846339849615,
+        0.5162891656485628
+      ]
+    ]
+  },
+  "match_check": {
+    "std_ratio_median": 0.9667894679790994,
+    "std_ratio_p05": 0.4072112191346883,
+    "std_ratio_p95": 1.644154220127449,
+    "mean_shift_abs_median": 0.13971147703662765,
+    "mean_shift_abs_p95": 1.1861694112585488
+  },
+  "source_m1": "m1_report\\checkpoints\\M1R_aggressive_t57.6_crank.pth",
+  "gates": {
+    "bn_count_53": true,
+    "buffers_finite": true,
+    "running_var_positive": true,
+    "var_clamped_fraction_below_1pct": true,
+    "params_unchanged": true,
+    "output_std_matches_M0": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 2,
+    "reload_ok": true
+  }
+}

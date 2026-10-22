@@ -1,0 +1,8 @@
+[M0] M0-8000 charge, SHA256 OK, parametres = 41,305,311
+
+53 FrozenBN dans M0-8000
+max |running_mean| par couche : min 0.2456  max 9.715
+running_var                   : min 8.596e-07  max 8.361e+04
+exemple backbone.bottom_up.stem.conv1.norm : eps=1e-05, weight[:4]=[1.0913312435150146, 1.113861322402954, 0.8722120523452759, 1.3775852918624878], bias[:4]=[1.4794970750808716, -1.121834397315979, -1.0647310018539429, -1.8752855062484741]
+
+CONCLUSION : statistiques NON triviales (vraies statistiques) : 'plain' et 'matched' sont proches.

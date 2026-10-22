@@ -1,0 +1,9 @@
+\begin{tabular}{@{}lrrrcll@{}}
+\toprule
+Config. & Params avant & Params apr\`es & R\'eduction (\%) & Poids (stem/int./res./RPN/fc) & Canaux supprim\'es backbone (\%) & Plage du rapport \\
+\midrule
+Whole backbone & 41\,305\,311 & 24\,026\,537 & 41.8 & 1/0.7/0.7/3/3.5 & 42--42 & environ -40 a -49 \% partout dans le backbone \\
+Aggressive & 41\,305\,311 & 17\,507\,472 & 57.6 & 0.85/0.7/0.7/2.7/2.9 & 66--66 & backbone -72 a -79 \%, fc6 -10 \%, fc7 -3 \% \\
+Maximal & 41\,305\,311 & 15\,808\,632 & 61.7 & 1.5/0.7/0.7/2.7/3 & 75--75 & backbone -77 a -91 \% \\
+\bottomrule
+\end{tabular}

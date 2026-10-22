@@ -1,0 +1,44 @@
+{
+  "mode": "matched",
+  "n_images": 300,
+  "seed": 1,
+  "refine_passes": 0,
+  "refine_images": 150,
+  "init": "sequential",
+  "n_seq_images": 60,
+  "seq_rounds": 3,
+  "drift_between_refine_passes": [],
+  "counters": {
+    "channels_total": 6556,
+    "var_clamped": 0,
+    "round_drifts": [
+      [
+        0.030273671748787322,
+        0.135702041806577
+      ],
+      [
+        0.11457683643340771,
+        0.3642388428531531
+      ]
+    ]
+  },
+  "match_check": {
+    "std_ratio_median": 0.9688899051954621,
+    "std_ratio_p05": 0.5974008469187077,
+    "std_ratio_p95": 1.3614790193608846,
+    "mean_shift_abs_median": 0.13285482688370673,
+    "mean_shift_abs_p95": 1.1084370472296272
+  },
+  "source_m1": "m1_report\\checkpoints\\M1R_maximal_t61.7_crank.pth",
+  "gates": {
+    "bn_count_53": true,
+    "buffers_finite": true,
+    "running_var_positive": true,
+    "var_clamped_fraction_below_1pct": true,
+    "params_unchanged": true,
+    "output_std_matches_M0": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 2,
+    "reload_ok": true
+  }
+}

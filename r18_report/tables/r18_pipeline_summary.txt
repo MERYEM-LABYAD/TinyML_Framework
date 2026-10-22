@@ -1,0 +1,1 @@
+compression 20.5x (44.80->2.19 MB); accuracy 95.00->92.32 (-2.68); pruned-only 11.52; KD 92.56; INT8 delta -0.24; latency 14.5->6.0 ms

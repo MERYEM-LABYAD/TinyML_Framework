@@ -1,0 +1,14 @@
+r18_report/imagenette2-160/
+*.pth
+*.pt
+*.zip
+*.tgz
+__pycache__/
+*.npz
+*.npy
+*.tar
+*.7z
+*.npz
+*.npy
+*.tar
+*.7z

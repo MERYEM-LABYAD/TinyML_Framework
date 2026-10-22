@@ -1,0 +1,90 @@
+{
+  "source_m3": "m1_report\\checkpoints\\M3_maximal_t61.7_crank_matched.pth",
+  "n_calib": 200,
+  "calib_seed": 1,
+  "backend": "onednn",
+  "scope": "stem + res2..res5 + box_head en INT8 ; FPN, RPN, predicteur en float",
+  "granularity": "par unite (frontieres en float)",
+  "infos": {
+    "fold_max_rel_diff": 2.250244506285526e-06,
+    "fpn_cosine_vs_float": {
+      "p2": 1.0015490055084229,
+      "p3": 1.0000635385513306,
+      "p4": 0.9998369812965393,
+      "p5": 0.9998692870140076,
+      "p6": 0.9998841881752014
+    }
+  },
+  "gates": {
+    "fold_exact": true,
+    "fpn_cosine_above_0.9": true,
+    "forward_finite": true,
+    "n_detections_at_0.05_on_one_image": 27
+  },
+  "float_m3": {
+    "label": "M3_float",
+    "input_hw": [
+      800,
+      1200
+    ],
+    "parameters": 15808632,
+    "size_mb_state_dict": 63.339424,
+    "size_mb_file": 63.46054,
+    "GMACs": 105.605807208,
+    "GFLOPs": 211.211614416,
+    "latency": {
+      "median_ms": 3061.881050000011,
+      "mean_ms": 3120.4190799999196,
+      "std_ms": 144.2350473754786,
+      "n": 10,
+      "threads": 4
+    }
+  },
+  "int8": {
+    "label": "M4_int8",
+    "input_hw": [
+      800,
+      1200
+    ],
+    "parameters": 15808673,
+    "latency": {
+      "median_ms": 3030.9234500000457,
+      "mean_ms": 3032.136580000042,
+      "std_ms": 15.619385033225166,
+      "n": 10,
+      "threads": 4
+    },
+    "parameters_float_equivalent": 15808632,
+    "size_mb_state_dict": 63.338932,
+    "size_mb_file": 63.475551,
+    "GFLOPs_note": "identique au M3 float (la quantification ne change pas le nombre d'operations)"
+  },
+  "eval": {
+    "coco_score_thresh": 0.05,
+    "custom_score_thresh": 0.5,
+    "AP": 46.619754889206014,
+    "AP50": 65.3437041781041,
+    "AP75": 56.315763280673536,
+    "APs": 0.0,
+    "APm": NaN,
+    "APl": 46.66387243087609,
+    "AP_per_class": {
+      "AP-No issues": 63.843182926551655,
+      "AP-Broken": 30.684861096216025,
+      "AP-Flashover damage": 45.331220644850376
+    },
+    "TP": 2737,
+    "FP": 1010,
+    "FN": 594,
+    "Precision": 0.7304510274886576,
+    "Recall": 0.8216751726208346,
+    "F1": 0.7733823113873977,
+    "Jaccard": 0.6304998848191661,
+    "n_gt": 3331,
+    "seconds_total": 1268.9109043999997,
+    "retention_AP": 0.654880398127029,
+    "retention_AP50": 0.7090894229188218
+  },
+  "stage": "M4",
+  "created": "2026-10-18 13:22:13"
+}
