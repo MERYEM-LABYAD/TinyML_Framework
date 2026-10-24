@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" width="900" height="270" role="img" aria-label="From a heavy detector to a small model on a drone: pruning, recalibration, distillation, INT8">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1B2B"/><stop offset="1" stop-color="#0B3A3A"/></linearGradient>
+<linearGradient id="blk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F8FD8"/><stop offset="1" stop-color="#1B5E9B"/></linearGradient>
+<linearGradient id="grn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FE3B0"/><stop offset="1" stop-color="#0B7A66"/></linearGradient>
+<filter id="gl"><feGaussianBlur stdDeviation="4"/></filter>
+<style>
+text{font-family:Segoe UI,Helvetica,Arial,sans-serif;fill:#E6F0ED}
+.m{font-family:Consolas,Menlo,monospace}
+.f{stroke:#2FE3B0;stroke-width:2.5;fill:none;stroke-dasharray:7 8;animation:d 1s linear infinite}
+@keyframes d{to{stroke-dashoffset:-15}}
+.rot{animation:r .08s linear infinite alternate;transform-box:fill-box;transform-origin:center}
+@keyframes r{from{transform:scaleX(1)}to{transform:scaleX(.8)}}
+.bob{animation:b 2.4s ease-in-out infinite}
+@keyframes b{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+</style>
+</defs>
+<rect width="900" height="270" rx="14" fill="url(#bg)"/>
+<g opacity=".18" stroke="#8FD3FF"><path d="M0 40H900M0 90H900M0 140H900M0 190H900M0 240H900"/></g>
+<text x="24" y="34" class="m" font-size="13" style="fill:#8FB7D4">FASTER R-CNN  →  PRUNING  →  RECALIBRATION  →  DISTILLATION  →  INT8  →  DRONE</text>
+
+<!-- stage 0: big model -->
+<g>
+<rect x="24" y="80" width="130" height="110" rx="10" fill="url(#blk)"/>
+<g fill="#CFE8FF" opacity=".75"><circle cx="46" cy="102" r="3"/><circle cx="70" cy="102" r="3"/><circle cx="94" cy="102" r="3"/><circle cx="118" cy="102" r="3"/><circle cx="46" cy="126" r="3"/><circle cx="70" cy="126" r="3"/><circle cx="94" cy="126" r="3"/><circle cx="118" cy="126" r="3"/><circle cx="46" cy="150" r="3"/><circle cx="70" cy="150" r="3"/><circle cx="94" cy="150" r="3"/><circle cx="118" cy="150" r="3"/></g>
+<text x="89" y="216" text-anchor="middle" font-size="15" font-weight="600">165.6 MB</text>
+<text x="89" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">original detector</text>
+</g>
+<path class="f" d="M158 135H196"/>
+
+<!-- stage 1 -->
+<g>
+<rect x="200" y="92" width="104" height="86" rx="10" fill="url(#blk)"/>
+<g fill="#CFE8FF" opacity=".75"><circle cx="222" cy="112" r="3"/><circle cx="246" cy="112" r="3"/><circle cx="270" cy="112" r="3"/><circle cx="222" cy="136" r="3"/><circle cx="270" cy="136" r="3"/><circle cx="246" cy="158" r="3"/></g>
+<text x="252" y="216" text-anchor="middle" font-size="15" font-weight="600">pruning</text>
+<text x="252" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">remove channels</text>
+</g>
+<path class="f" d="M308 135H340"/>
+
+<!-- stage 2 -->
+<g>
+<rect x="344" y="100" width="90" height="70" rx="10" fill="url(#blk)"/>
+<path d="M362 150 Q380 110 416 130" stroke="#CFE8FF" stroke-width="2.5" fill="none" opacity=".8"/>
+<text x="389" y="216" text-anchor="middle" font-size="15" font-weight="600">recalibration</text>
+<text x="389" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">refresh statistics</text>
+</g>
+<path class="f" d="M438 135H468"/>
+
+<!-- stage 3 -->
+<g>
+<rect x="472" y="106" width="76" height="58" rx="10" fill="url(#grn)"/>
+<text x="510" y="142" text-anchor="middle" font-size="22">🎓</text>
+<text x="510" y="216" text-anchor="middle" font-size="15" font-weight="600">distillation</text>
+<text x="510" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">learn from the teacher</text>
+</g>
+<path class="f" d="M552 135H582"/>
+
+<!-- stage 4 -->
+<g>
+<rect x="586" y="116" width="52" height="38" rx="8" fill="url(#grn)"/>
+<text x="612" y="141" text-anchor="middle" class="m" font-size="13" style="fill:#06211B" font-weight="700">INT8</text>
+<text x="612" y="216" text-anchor="middle" font-size="15" font-weight="600">18.2 MB</text>
+<text x="612" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">9.1× smaller</text>
+</g>
+<path class="f" d="M642 135H682"/>
+
+<!-- drone -->
+<g class="bob"><g transform="translate(770 120) scale(1.7)">
+<ellipse class="rot" cx="-27" cy="-16" rx="26" ry="2.4" fill="#000" opacity=".6"/><ellipse class="rot" cx="27" cy="-16" rx="26" ry="2.4" fill="#000" opacity=".6"/>
+<path d="M-14 -4 L-27 -13 M14 -4 L27 -13" stroke="#20262B" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M-18 -4 Q-18 -12 -8 -12 L8 -12 Q18 -12 18 -4 L16 4 Q0 9 -16 4Z" fill="#EEF1F3" stroke="#1F262B" stroke-width="1.6"/>
+<rect x="-10" y="8" width="20" height="9" rx="2" fill="#0F5E32" stroke="#2FE3B0"/>
+<rect x="6" y="4" width="14" height="12" rx="4" fill="#1B2126"/><circle cx="14" cy="10" r="4" fill="#3E7FB5"/>
+</g></g>
+<text x="770" y="216" text-anchor="middle" font-size="15" font-weight="600">on board</text>
+<text x="770" y="236" text-anchor="middle" font-size="12" style="fill:#9FC2DC">no Internet needed</text>
+
+<!-- chasing glow -->
+<g filter="url(#gl)">
+<rect x="24" y="80" width="130" height="110" rx="10" fill="#2FE3B0" opacity="0"><animate attributeName="opacity" values="0;.35;0;0;0;0;0;0" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="200" y="92" width="104" height="86" rx="10" fill="#2FE3B0" opacity="0"><animate attributeName="opacity" values="0;0;.35;0;0;0;0;0" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="344" y="100" width="90" height="70" rx="10" fill="#2FE3B0" opacity="0"><animate attributeName="opacity" values="0;0;0;.35;0;0;0;0" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="472" y="106" width="76" height="58" rx="10" fill="#2FE3B0" opacity="0"><animate attributeName="opacity" values="0;0;0;0;.45;0;0;0" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="586" y="116" width="52" height="38" rx="8" fill="#2FE3B0" opacity="0"><animate attributeName="opacity" values="0;0;0;0;0;.5;0;0" dur="8s" repeatCount="indefinite"/></rect>
+</g>
+</svg>
