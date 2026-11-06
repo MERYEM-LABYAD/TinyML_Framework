@@ -28,7 +28,7 @@
     <td align="center" width="25%"><h2>101.1 %</h2><sub>of the original AP kept after removing <b>41.8 %</b> of the parameters<br/>(95.6 % against the detector retrained with the same recipe)</sub></td>
     <td align="center" width="25%"><h2>9.1×</h2><sub>smaller: <b>165.6 MB → 18.2 MB</b><br/>for the maximal model in INT8</sub></td>
     <td align="center" width="25%"><h2>80.2 %</h2><sub>of the original accuracy kept by that<br/>maximal INT8 model</sub></td>
-    <td align="center" width="25%"><h2>0</h2><sub>measurements on embedded hardware so far:<br/>that is the next step</sub></td>
+    <td align="center" width="25%"><h2>3</h2><sub>final <b>INT8 models</b> delivered,<br/>from 45.8 MB to 18.2 MB</sub></td>
   </tr>
 </table>
 
@@ -58,7 +58,7 @@ flowchart LR
     B --> C[M2<br/>recalibration<br/>BatchNorm statistics]
     C --> D[M3<br/>distillation<br/>detection loss + 0.5 x MSE on FPN P2-P5]
     D --> E[M4<br/>INT8 quantization<br/>stem kept in FP32]
-    E --> F[(Onboard<br/>perspective)]
+    E --> F[(3 INT8 models<br/>delivered)]
     style A fill:#1B5E9B,color:#fff
     style D fill:#0B7A66,color:#fff
     style E fill:#0B7A66,color:#fff
@@ -85,7 +85,9 @@ flowchart LR
 | Original detector M0 | 0 % | 0.7119 | 100 % |
 | M0 retrained with the same recipe (control) | 0 % | 0.7528 | 105.7 % |
 | Whole backbone, critical modules protected | 41.8 % | 0.7199 | **101.1 %** |
+| Whole backbone, INT8 (stem in FP32), **45.8 MB** | 41.8 % | 0.7197 | 101.1 % |
 | Aggressive (mean of 3 seeds) | 57.6 % | 0.6101 | 85.7 % |
+| Aggressive, INT8 (stem in FP32), **24.0 MB** | 57.6 % | 0.6020 | 84.6 % |
 | Uniform allocation, same reduction | 57.6 % | 0.7032 | **98.8 %** |
 | Maximal | 61.7 % | 0.5751 | 80.8 % |
 | Maximal, INT8 (stem in FP32), **18.2 MB** | 61.7 % | 0.5712 | 80.2 % |
@@ -110,11 +112,31 @@ The average hides an inequality: healthy insulators stay well detected, damage c
   <img src="assets/recall.svg" alt="Recall per class, original versus compressed" width="760" />
 </p>
 
-Of the 295 objects the original finds and the maximal model misses, **206** are class confusions (a damaged insulator labelled healthy), **48** are poorly localised and **41** are missed. Failure images are in the report (section *Failure Images*).
+Most of the loss comes from class confusions (a damaged insulator labelled healthy). Failure images are in the report (section *Failure Images*).
 
 ### A second architecture
 
 The same framework, on ResNet-18 (Imagenette): 81 % of the parameters removed, 95.0 % → 92.3 % accuracy after INT8, **20.5× smaller** (44.8 MB → 2.19 MB). Taylor was the best of four importance criteria between 50 % and 80 % reduction on this model.
+
+---
+
+## The three delivered models
+
+| Model | Parameters removed | Weights FP32 → INT8 | AP (INT8) | Retention (INT8) |
+|---|---:|---:|---:|---:|
+| **Whole backbone** | 41.8 % | 96.4 → 45.8 MB | 0.7197 | **101.1 %** |
+| **Aggressive** | 57.6 % | 70.2 → 24.0 MB | 0.6020 | **84.6 %** |
+| **Maximal** | 61.7 % | 63.3 → 18.2 MB | 0.5712 | **80.2 %** |
+
+Retention = AP of the model / AP of the original detector (0.7119), on the 320 test images. Sizes are the serialized weights (`state_dict`); the original detector is 165.6 MB.
+
+---
+
+## Interactive page and video
+
+- **Interactive page**: [open the page](https://<your-account>.github.io/TinyML_Framework/) (source: [`docs/index.html`](docs/index.html)). Build your own model with the compression sliders and see the accuracy/size trade-off.
+- **Demo video** (1 min 47, English): see the project post on LinkedIn.
+- The clips in the video are AI-generated and the scores shown in the detection demo are simulated.
 
 ---
 
@@ -174,6 +196,7 @@ GitHub refuses files above 100 MB, and the original detector is 165.6 MB, so wei
 | Item | Where | Check |
 |---|---|---|
 | IDID V1.2 images and annotations | Dataset owner (follow its licence). Set `TINYML_JSON_DIR` and `TINYML_IMAGES`. | n/a |
+| **Original detector M0** (8,000 iterations) | Repository *Releases* page, or the Kaggle dataset used for the experiments. Set `TINYML_M0`. | SHA-256 `740FFEB4C02BE3658DE1E3CC486588BE16B83BC1150592DAE4D69C5984B9BB8E` (every script verifies it) |
 | Student checkpoints (about 70 MB each) | Not tracked | Hashes in [`docs/CHECKPOINTS_SHA256.csv`](docs/CHECKPOINTS_SHA256.csv) |
 
 Environment variables: `TINYML_ROOT`, `TINYML_M0`, `TINYML_JSON_DIR`, `TINYML_IMAGES`, `TINYML_FASTER`, `TINYML_DEVICE` (`cpu` to force the CPU).
@@ -204,13 +227,17 @@ TinyML_Framework/
 └── tests/
 ```
 
----
-
 ## Next: onboard hardware
 
 <p align="center"><img src="https://img.shields.io/badge/Raspberry%20Pi%205-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white" alt="Raspberry Pi 5" /> <img src="https://img.shields.io/badge/NVIDIA%20Jetson-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA Jetson" /></p>
 
 The INT8 model is 18.2 MB, so memory is not the issue on a Raspberry Pi 5 (4-core Arm, 8 GB, no CUDA GPU). Speed is the open question: the best figure so far is about 5 seconds per image on a laptop CPU, which is **not real time**. The report (appendix *Embedded Platforms and Integration Path*) describes the steps: quantize with the `qnnpack` backend, export to TorchScript or ONNX, check that AP is unchanged, then measure latency, memory, temperature and energy. `benchmark_on_device.py` is ready:
 
-```bash
-python benchmark_on_device.py --model student_int8.ts --input 1 3 800 1200 --threads 4 --runs 30
+
+## Author
+
+**Meryem Labyad**, engineering student at EMG Rabat, TinyML / Edge AI internship at Sport Score.
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1B2B,100:0B7A66&height=90&section=footer" alt="" />
+</p>
