@@ -46,7 +46,7 @@
 
 The detector finds insulators on UAV images and tells whether each is **healthy** (*No issues*), **broken** (*Broken*) or damaged by an electric arc (*Flashover damage*). The original network (Faster R-CNN, ResNet-50-FPN, 41.3 M parameters, AP 71.19 on 320 test images) is too heavy for a small onboard computer.
 
-This repository belongs to an internship carried out at **Sport Score** (EMG Rabat, TinyML / Edge AI). Models are compared by **retention**: the AP of the compressed model divided by the AP of the original detector.
+This repository belongs to a TinyML / Edge AI internship (EMG Rabat). Models are compared by **retention**: the AP of the compressed model divided by the AP of the original detector.
 
 ---
 
@@ -134,7 +134,7 @@ Retention = AP of the model / AP of the original detector (0.7119), on the 320 t
 
 ## Interactive page and video
 
-- **Interactive page**: [open the page](https://<your-account>.github.io/TinyML_Framework/) (source: [`docs/index.html`](docs/index.html)). Build your own model with the compression sliders and see the accuracy/size trade-off.
+- **Interactive page**: [open the page](https://meryem-labyad.github.io/TinyML_Framework/) (source: [`index.html`](index.html)). Build your own model with the compression sliders and see the accuracy/size trade-off.
 - **Demo video** (1 min 47, English): see the project post on LinkedIn.
 - The clips in the video are AI-generated and the scores shown in the detection demo are simulated.
 
@@ -236,7 +236,7 @@ The INT8 model is 18.2 MB, so memory is not the issue on a Raspberry Pi 5 (4-cor
 
 ## Author
 
-**Meryem Labyad**, engineering student at EMG Rabat, TinyML / Edge AI internship at Sport Score.
+**Meryem Labyad**, engineering student at EMG Rabat, TinyML / Edge AI internship.
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1B2B,100:0B7A66&height=90&section=footer" alt="" />
