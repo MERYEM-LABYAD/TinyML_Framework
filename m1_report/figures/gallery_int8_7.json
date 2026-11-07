@@ -1,0 +1,85 @@
+{
+  "rule": "random draw, fixed seed, stratified by class, no manual selection",
+  "seed": 7,
+  "per_class": 3,
+  "m3": "m1_report\\checkpoints\\M3_maximal_t61.7_crank_matched_v5pure.pth",
+  "summary": {
+    "M0": {
+      "OK": 8,
+      "MISS": 1
+    },
+    "M3": {
+      "OK": 6,
+      "MISS": 3
+    },
+    "M4_INT8": {
+      "OK": 5,
+      "MISS": 4
+    }
+  },
+  "rows": [
+    {
+      "image": "150460v.JPG",
+      "gt_class": "No issues",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "OK"
+    },
+    {
+      "image": "170691 (2)d.JPG",
+      "gt_class": "No issues",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "OK"
+    },
+    {
+      "image": "150693 (2)d.JPG",
+      "gt_class": "No issues",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "OK"
+    },
+    {
+      "image": "150362v.JPG",
+      "gt_class": "Broken",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "OK"
+    },
+    {
+      "image": "170063d.JPG",
+      "gt_class": "Broken",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "OK"
+    },
+    {
+      "image": "170223v.JPG",
+      "gt_class": "Broken",
+      "M0": "OK",
+      "M3": "MISS",
+      "M4_INT8": "MISS"
+    },
+    {
+      "image": "150458d.JPG",
+      "gt_class": "Flashover damage",
+      "M0": "OK",
+      "M3": "OK",
+      "M4_INT8": "MISS"
+    },
+    {
+      "image": "150740 (2)d.JPG",
+      "gt_class": "Flashover damage",
+      "M0": "MISS",
+      "M3": "MISS",
+      "M4_INT8": "MISS"
+    },
+    {
+      "image": "160605h.JPG",
+      "gt_class": "Flashover damage",
+      "M0": "OK",
+      "M3": "MISS",
+      "M4_INT8": "MISS"
+    }
+  ]
+}
